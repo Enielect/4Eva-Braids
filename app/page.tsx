@@ -1,101 +1,197 @@
-import Image from "next/image";
+import Image from 'next/image';
+import {
+  Hamburger,
+  MailIcon,
+  OfficeIcon,
+  PhoneIcon,
+  SocialFacebookIcon,
+  SocialInstagramIcon,
+  SocialSnapChatIcon,
+  SocialTwitterIcon,
+} from './atoms/icons';
+import HeroImage from '@/public/hero-image.svg';
+import Logo from '@/public/logo.svg';
+import CustomButton from './atoms/Button';
+import Model1 from '@/public/Model-1.svg';
+import ImageCard from './Molecules/ImageCard';
+import DescriptionCard from './Molecules/DescriptionCard';
+import OfferCard from './Molecules/OfferCard';
+import TipsCard from './Molecules/TipsCard';
+import AdressDescription from './Molecules/AdressDescription';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className=''>
+      <div className='bg-primary/500 px-2 py-4 flex justify-between'>
+        <div>
+          <Image
+            className='w-full'
+            src={Logo}
+            alt='logo'
+            width={80}
+            height={80}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Hamburger className='h-8' />
+      </div>
+      <div className='bg-primary/50'>
+        <div>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            className='w-full'
+            src={HeroImage}
+            alt='logo'
+            width={300}
+            height={300}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        </div>
+        <div className='px-3'>
+          <span className='uppercase block text-primary/500 text-4xl text-center py-3'>
+            hair braiding & dreadlocks
+          </span>
+          <span className='uppercase block text-neutral-700 text-2xl py-2 text-center'>
+            transform your hair into a work of art
+          </span>
+        </div>
+        <div className='px-3 py-4'>
+          <span className='text-neutral-600 text-center block pb-3 text-xl'>
+            Get your perfect look with a free sylist consultation
+          </span>
+          <CustomButton>Book Now</CustomButton>
+        </div>
+      </div>
+      <div className='bg-primary/500 px-6 py-8'>
+        <div className='uppercase text-center py-4 text-3xl text-white'>
+          unleash your inner beuty with artistry salon
+        </div>
+        <div className='space-y-8'>
+          <ImageCard image={Model1} />
+          <DescriptionCard
+            title='EXPERIENCED STYLISTS'
+            description='Our stylists are experienced in all hair types and styles'
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <DescriptionCard
+            title='HIGH QUALITY PRODUCTS'
+            description='Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
           />
-          Go to nextjs.org →
-        </a>
+          <ImageCard image={Model1} />
+          <DescriptionCard
+            title='AFFORDABLE PRICES'
+            description='Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
+          />
+          <DescriptionCard
+            title='CUSTOMER SATISFACTION'
+            description='Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
+          />
+        </div>
+      </div>
+      <div className='px-10 pb-6 bg-neutral-50'>
+        <div className='uppercase py-6 text-3xl text-center'>WHAT WE OFFER</div>
+        <div className='space-y-8'>
+          <OfferCard
+            image={Model1}
+            title='HAIR BRAIDING'
+            description='Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
+          />
+          <OfferCard
+            image={Model1}
+            title='HAIR BRAIDING'
+            description='Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
+          />
+          <OfferCard
+            image={Model1}
+            title='HAIR BRAIDING'
+            description='Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
+          />
+          <OfferCard
+            image={Model1}
+            title='HAIR BRAIDING'
+            description='Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
+          />
+          <CustomButton>View all services</CustomButton>
+        </div>
+      </div>
+      <section className='pb-8 bg-[#D58A2D1A] px-8'>
+        <div className='upercase py-6 text-3xl text-center'>
+          BRAID TIPS FOR YOU
+        </div>
+        <div className='space-y-4 mb-6'>
+          <TipsCard
+            image={Model1}
+            title='BLOG TITLE'
+            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
+          />
+          <TipsCard
+            image={Model1}
+            title='BLOG TITLE'
+            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
+          />
+          <TipsCard
+            image={Model1}
+            title='BLOG TITLE'
+            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
+          />
+          <TipsCard
+            image={Model1}
+            title='BLOG TITLE'
+            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
+          />
+        </div>
+        <CustomButton>View All</CustomButton>
+      </section>
+      <section className='py-8 px-8'>
+        <div className='uppercase py-6 text-3xl text-center'>Our works</div>
+        <div></div>
+        <CustomButton>View Complete Gallery</CustomButton>
+      </section>
+      <section className='px-5 m-4 py-8 rounded-xl bg-[#D58A2D1A]'>
+        <div className='uppercase py-6 text-3xl text-center'>get in touch</div>
+        <div className='px-5 text-xl w-full text-center text-neutral-700 pb-5'>
+          Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis
+          congue quis odio massa ipsum. Amet diam venenatis.
+        </div>
+        <div className='space-y-4 pb-10'>
+          <AdressDescription
+            icon={<OfficeIcon />}
+            title='ADDRESS'
+            description='1234 Street Name, City Name, Country Name'
+          />
+          <AdressDescription
+            icon={<MailIcon />}
+            title='ADDRESS'
+            description='1234 Street Name, City Name, Country Name'
+          />
+          <AdressDescription
+            icon={<PhoneIcon />}
+            title='ADDRESS'
+            description='1234 Street Name, City Name, Country Name'
+          />
+        </div>
+        <div className='flex flex-col justify-center gap-4 text-center'>
+          <span className='text-neutral/900 text-2xl text-center'>
+            Follow us on social media
+          </span>
+          <div className='flex mx-auto items-center gap-4'>
+            <SocialFacebookIcon />
+            <SocialTwitterIcon />
+            <SocialInstagramIcon />
+            <SocialSnapChatIcon />
+          </div>
+        </div>
+      </section>
+      <footer className='px-7 py-5 text-white bg-neutral-800'>
+        <div className='flex gap-4 text-xl justify-center flex-wrap'>
+          {['home', 'about', 'services', 'blog', 'gallery', 'contact us'].map(
+            (ele, i) => (
+              <span className='uppercase' key={i}>
+                {ele}
+              </span>
+            )
+          )}
+        </div>
+        <span className='py-5 text-center block text-xl'>
+          &copy; 4Eva Braids, All Rights Reserved
+        </span>
       </footer>
-    </div>
+    </main>
   );
 }
