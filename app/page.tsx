@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import {
-  Hamburger,
   MailIcon,
   OfficeIcon,
   PhoneIcon,
@@ -10,7 +9,6 @@ import {
   SocialTwitterIcon,
 } from './atoms/icons';
 import HeroImage from '@/public/hero-image.svg';
-import Logo from '@/public/logo.svg';
 import CustomButton from './atoms/Button';
 import Model1 from '@/public/Model-1.svg';
 import ImageCard from './Molecules/ImageCard';
@@ -18,22 +16,12 @@ import DescriptionCard from './Molecules/DescriptionCard';
 import OfferCard from './Molecules/OfferCard';
 import TipsCard from './Molecules/TipsCard';
 import AdressDescription from './Molecules/AdressDescription';
+import Footer from './Molecules/Footer';
 
 export default function Home() {
   return (
     <main className=''>
-      <div className='bg-primary/500 px-2 py-4 flex justify-between'>
-        <div>
-          <Image
-            className='w-full'
-            src={Logo}
-            alt='logo'
-            width={80}
-            height={80}
-          />
-        </div>
-        <Hamburger className='h-8' />
-      </div>
+      
       <div className='bg-primary/50'>
         <div>
           <Image
@@ -178,20 +166,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className='px-7 py-5 text-white bg-neutral-800'>
-        <div className='flex gap-4 text-xl justify-center flex-wrap'>
-          {['home', 'about', 'services', 'blog', 'gallery', 'contact us'].map(
-            (ele, i) => (
-              <span className='uppercase' key={i}>
-                {ele}
-              </span>
-            )
-          )}
-        </div>
-        <span className='py-5 text-center block text-xl'>
-          &copy; 4Eva Braids, All Rights Reserved
-        </span>
-      </footer>
+     <Footer />
     </main>
   );
 }
