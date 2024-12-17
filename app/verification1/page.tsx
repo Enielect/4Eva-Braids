@@ -1,4 +1,3 @@
-// components/VerificationPage.js
 import React from "react";
 import Image from "next/image";
 import Logo from '@/public/logo2.svg'
@@ -23,7 +22,6 @@ export default function VerificationPage() {
             in the boxes below
           </p>
 
-          {/* Code Input Boxes */}
           <div className="flex justify-center space-x-2 sm:space-x-4">
             {Array.from({ length: 6 }).map((_, index) => (
               <div
