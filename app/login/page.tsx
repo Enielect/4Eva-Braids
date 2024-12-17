@@ -12,10 +12,9 @@ import Logo from '@/public/logo2.svg';
 export default function LoginPage() {
   return (
     <div className="flex min-h-screen bg-gray-100">
-      {/* Left Side - Image (Visible on desktop and larger screens only) */}
       <div className="w-[840px] h-[1024px] hidden lg:block">
         <Image
-          src={HeroImage} // Replace with the path to your image
+          src={HeroImage} 
           alt="Login Background"
           width={840}
           height={1024}
@@ -25,22 +24,20 @@ export default function LoginPage() {
 
       {/* Right Side - Login Form */}
       <div className="w-full lg:w-[600px] mx-auto flex flex-col justify-center p-8 bg-white relative">
-        {/* Logo at the top-left only on mobile */}
         <div className="absolute top-0 left-0 p-4 lg:hidden">
           <Image
-            src={Logo}// Replace with your logo image path
+            src={Logo}
             alt="4EVA BRAIDS Logo"
             width={123}
             height={24}
           />
         </div>
 
-        {/* Header Logo on top for mobile */}
         <Card className="shadow-none border-0">
           <CardContent className="mt-16 space-y-6">
           <div className="mb-8 text-center">
           <Image
-            src={Logo} // Replace with your header logo path
+            src={Logo} 
             alt="4EVA BRAIDS Logo"
             width={326}
             height={64}
@@ -90,7 +87,6 @@ export default function LoginPage() {
               </Button>
             </form>
             <div className="text-center text-sm">
-              {/* Forgot password link under the password input */}
               <Link href="/verification" className="text-[#F4A261] hover:underline block mt-2 text-right">
                 Forgot password?
               </Link>
