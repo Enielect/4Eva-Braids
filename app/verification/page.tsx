@@ -1,4 +1,3 @@
-// components/VerificationPage.js
 import React from "react";
 import Image from "next/image";
 import Logo from '@/public/logo2.svg'
@@ -9,7 +8,7 @@ export default function VerificationPage() {
       {/* Header */}
       <header className="p-4 flex justify-start">
         <Image
-          src={Logo} // Replace with your logo path
+          src={Logo}
           alt="4EVA BRAIDS"
           className="w-[204px] h-[40px] object-contain"
         />
@@ -23,7 +22,6 @@ export default function VerificationPage() {
             in the boxes below
           </p>
 
-          {/* Code Input Boxes */}
           <div className="flex justify-center space-x-2 sm:space-x-4">
             {Array.from({ length: 6 }).map((_, index) => (
               <div
