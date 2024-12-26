@@ -71,18 +71,20 @@ body {
   }
 }
 
-.card-shadow {
-  box-shadow: 4 4 0 0 #000000;
-}
+@layer base {
+  .card-shadow {
+    box-shadow: 4 4 0 0 #000000;
+  }
 
-.image-shadow {
-  box-shadow: 3 3 2.68 0 #000000;
-}
+  .image-shadow {
+    box-shadow: 3 3 2.68 0 #000000;
+  }
 
-.first-grid-item {
-  grid-column: 1/-1;
-}
+  .first-grid-item {
+    grid-column: 1/-1;
+  }
 
-.dir-rtl {
-  direction: rtl;
+  .dir-rtl {
+    direction: rtl;
+  }
 }
