@@ -14,6 +14,11 @@ const geistMono = localFont({
   variable: '--font-geist-mono',
   weight: '100 900',
 });
+const pangram = localFont({
+  src: './fonts/PPPangramSans-CompactRegular.otf',
+  variable: '--font-pangram',
+  weight: '500',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -28,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} grid grid-rows-[auto_1fr]  h-[100dvh] ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${pangram.className} grid grid-rows-[auto_1fr]  h-[100dvh] ${geistMono.variable} antialiased`}
       >
         <Header />
         <div className='grid grid-[1fr_auto] min-h-[calc(100dvh-75px)] overflow-auto'>

@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </div>
       <div className='bg-primary/500 px-6 md:px-9 lg:px-10 py-8 sm:py-14'>
-        <div className='uppercase text-center py-4 sm:py-10 sm:text-5xl sm:max-w-[49rem] sm:leading-[3.5rem] sm:text-left text-3xl text-white'>
+        <div className='uppercase text-center py-4 sm:py-10 sm:text-5xl sm:max-w-[49rem] font-semibold sm:leading-[3.5rem] sm:text-left text-3xl text-white'>
           unleash your inner beuty with artistry salon
         </div>
         <div className='sm:grid grid-cols-2 gap-x-8'>
@@ -90,7 +90,8 @@ export default function Home() {
         </div>
       </div>
       <div className='px-10 pb-6 bg-neutral-50'>
-        <div className='uppercase py-6 text-3xl text-center sm:text-5xl sm:text-left sm:py-8'>
+        {/* <div className='uppercase py-6 text-3xl text-center sm:text-5xl sm:text-left sm:py-8'> */}
+        <div className='uppercase py-6 text-3xl text-center sm:text-5xl  sm:py-8'>
           WHAT WE OFFER
         </div>
         {/* <div className='mt-5 gap-y-12 grid sm:grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center'> */}
@@ -121,7 +122,8 @@ export default function Home() {
         </div>
       </div>
       <section className='pb-8 bg-[#D58A2D1A] px-8'>
-        <div className='uppercase py-6 text-3xl text-center sm:text-5xl sm:text-left sm:py-8'>
+        {/* <div className='uppercase py-6 text-3xl text-center sm:text-5xl sm:text-left sm:py-8'> */}
+        <div className='uppercase py-6 text-3xl text-center sm:text-5xl  sm:py-8'>
           braid tips for you
         </div>
         {/* <div className='mt-5 gap-y-12 grid sm:grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center'> */}
