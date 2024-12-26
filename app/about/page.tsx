@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import HeroImage from '@/public/hero-image.svg';
 import Image from 'next/image';
 import { EyeIcon, MissionIcon } from '../../components/atoms/icons';
+import Heading from '@/components/Molecules/Heading';
 
 const AboutPage = () => {
   return (
@@ -131,21 +132,7 @@ const AboutPage = () => {
   );
 };
 
-export function Heading({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`${className} uppercase text-center py-4 text-2xl font-semibold md:text-3xl lg:text-3xl text-black`}
-    >
-      {children}
-    </div>
-  );
-}
+
 
 type InnerCardProp = {
   icon: ReactNode;

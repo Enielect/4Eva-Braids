@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Heading } from '../about/page';
 import ServicesCard from '@/components/Molecules/ServicesCard';
 import ImageCard from '@/components/Molecules/ImageCard';
 import BookAppointment from '@/public/book_appointment.png';
@@ -11,6 +10,7 @@ import { Input } from '@/components/ui/input';
 // import { SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 import AccordionWrapper from '@/components/Molecules/AccordionWrapper';
+import Heading from '@/components/Molecules/Heading';
 
 const ServicesPage = () => {
   return (
