@@ -13,15 +13,15 @@ const OfferCard = (props: {
   description: string;
 }) => {
   return (
-    <Card className='!border-none outline-none shadow-none bg-inherit'>
+    <Card className='!border-none outline-none  shadow-none bg-inherit'>
       <CardContent className=''>
-        <div className='overflow-hidden rounded-xl bg-neutral-100'>
-          <Image src={props.image} width={300} height={300} alt='what we do' />
+        <div className='overflow-hidden mx-auto max-h-[12rem] max-w-[20rem] rounded-xl bg-neutral-100'>
+          <Image src={props.image} width={300} height={300} className='h-full w-full' alt='what we do' />
         </div>
-        <CardTitle className='text-2xl text-center py-3'>
+        <CardTitle className='text-2xl !font-normal text-center py-3'>
           {props.title}
         </CardTitle>
-        <CardDescription className='text-center text-lg'>
+        <CardDescription className='text-center max-w-96 text-lg'>
           {props.description}
         </CardDescription>
       </CardContent>
