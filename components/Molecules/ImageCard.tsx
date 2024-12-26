@@ -11,7 +11,7 @@ const ImageCard = (props: {
     >
       <Image
         src={props.image}
-        className='object-center h-full w-full '
+        className='object-center h-full w-full object-cover'
         alt='logo'
         width={300}
         height={300}

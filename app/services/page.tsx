@@ -17,7 +17,6 @@ const ServicesPage = () => {
     <div className='mx-8 my-6'>
       <header className='text-center'>
         <Heading className='sm:hidden'>what we offer</Heading>
-        <Heading>our delicious offers</Heading>
         <Design className='mx-auto hidden sm:block' />
         <span className='max-w-[300px] py-3 text-neutral-700 hidden sm:inline-block'>
           Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis
@@ -25,7 +24,7 @@ const ServicesPage = () => {
         </span>
       </header>
 
-      <section className='mt-5 gap-y-12 grid sm:grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center'>
+      <section className='mt-5 gap-y-12 grid max-[480px]:grid-cols-1 grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center'>
         {/* ServicesCard */}
         {Array(10)
           .fill('')
@@ -37,14 +36,14 @@ const ServicesPage = () => {
             />
           ))}
       </section>
-      <section className='h-[600px] my-[60px]'>
-        <div className='h-full grid grid-cols-[1fr_2fr] gap-[3rem]'>
-          <ImageCard image={BookAppointment} className='h-full' />
+      <section className=' my-[60px]'>
+        <div className='h-full grid md:grid-cols-[1fr_2fr] gap-[3rem]'>
+          <ImageCard image={BookAppointment} className='lg:max-h-[40rem]' />
           <div>
-            <h3 className='uppercase text-5xl max-w-[400px] leading-[4rem] text-neutral-900 py-4'>
+            <h3 className='uppercase text-2xl max-sm:text-center font-semibold sm:text-3xl md:text4xl lg:text-5xl  max-w-[400px] lg:leading-[4rem] text-neutral-900 py-4'>
               how to book an appointment
             </h3>
-            <div className='grid gap-6 grid-cols-3'>
+            <div className='grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
               <DescriptionCard
                 description='lorem4serserwr skla jdsklfj akldjsfkaj sdfkjasdfjdjfad fd'
                 title='I am the title'
@@ -71,7 +70,6 @@ const ServicesPage = () => {
       <section className='sm:max-w-[60rem] mx-auto'>
         <div className='text-center'>
           <Heading className='sm:hidden'>book a service</Heading>
-          <Heading>our delicious offers</Heading>
           <Design className='mx-auto hidden sm:block' />
           <span className='max-w-[300px] py-3 text-neutral-700 hidden sm:inline-block'>
             Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis

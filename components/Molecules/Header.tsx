@@ -10,6 +10,7 @@ import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const pathName = usePathname();
+  console.log(pathName);
   return (
     <div className='bg-primary/500 px-4 md:px-8 py-5 flex items-center justify-between'>
       {/* logo */}
@@ -33,8 +34,10 @@ const Header = () => {
                 <Link
                   href={item.href}
                   className={`text-white ${
-                    pathName.toLowerCase() === `/${item.name.toLowerCase()}` &&
-                    'after:content-[""] after:absolute after:w-full after:h-[2px] after:bg-white after:bottom-0 after:left-0'
+                    pathName.toLowerCase() === item.name.toLowerCase() ||
+                    (pathName.toLowerCase() === '/' &&
+                      item.name.toLowerCase() === 'home' &&
+                      'after:content-[""] after:absolute after:w-full after:h-[2px] after:bg-white after:bottom-0 after:left-0')
                   }  uppercase text-lg font-bold  py-1`}
                 >
                   {item.name}

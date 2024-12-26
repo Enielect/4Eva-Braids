@@ -15,7 +15,7 @@ const GalleryPage = () => {
       <div className='flex py-4 justify-end'>
         <SelectDemo />
       </div>
-      <div className='gap-y-8 grid sm:grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center'>
+      <div className='grid md:grid-cols-2 gap-x-7 gap-y-10 lg:grid-cols-3 xl:grid-cols-4  place-items-center mb-6'>
         {Array(10)
           .fill('')
           .map((ele, i) => (
@@ -50,11 +50,11 @@ function PlaceholderImage() {
     <svg
       width='348'
       height='348'
-      className='mx-auto h-fit max-w-[250px] max-sm:max-w-[290px]'
+      className='block'
       viewBox='0 0 348 348'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
-      //   xmlns:xlink='http://www.w3.org/1999/xlink'
+      // xmlns:xlink='http://www.w3.org/1999/xlink'
     >
       <g clipPath='url(#clip0_3771_7960)'>
         <rect

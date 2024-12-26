@@ -69,7 +69,7 @@ export default function Home() {
               description='Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
             />
           </div>
-          <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-7 mt-7'>
+          <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-7 max-sm:mt-7'>
             <ImageCard
               className='first-grid-item order-4 sm:max-h-[550px]'
               image={Model1}
@@ -159,8 +159,8 @@ export default function Home() {
         </div>
       </section>
       <section className='mx-14 relative max-md:flex-col gap-4 justify-between sm:max-w-[80vw] sm:mx-auto flex md:my-[130px]'>
-        <div className='sm:max-w-[30rem] sm:relative sm:-right-12 max-sm:my-10'>
-          <div className='absolute -z-10 bg-[#F3ECD5] -left-10 max-sm:btop-0 sm:-bottom-8 rounded-md max-sm:w-[80%] sm:w-[34vw] h-[80%]'></div>
+        <div className='sm:max-w-[30rem] relative sm:-right-12 max-sm:my-10'>
+          <div className='absolute -z-10 bg-[#F3ECD5] -left-10 max-sm:-bottom-7 sm:-bottom-8 rounded-md max-sm:w-[80%] sm:w-[34vw] h-[80%]'></div>
           <div className='h-full w-full md:w-[40vw] rounded-md overflow-hidden'>
             <Image
               src={ForeGround}
@@ -171,7 +171,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className='px-6 md:px-8 md:relative right-12 top-10 py-8 rounded-xl sm:max-w-[33rem] lg:w-[45vw] md:w-[40vw] lg:max-w-[45rem] bg-[#f3ecd5]'>
+        <div className='px-6 md:px-8 max-md:my-10 max-sm:mt-3 max-sm:mb-10 md:relative right-12 top-10 py-8 rounded-xl sm:max-w-[33rem] lg:w-[45vw] md:w-[40vw] lg:max-w-[45rem] bg-[#f3ecd5]'>
           <div className='uppercase py-6 text-3xl text-center md:sm:text-left '>
             get in touch
           </div>
