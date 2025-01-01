@@ -7,6 +7,8 @@ import { Hamburger } from '../atoms/icons';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import { usePathname } from 'next/navigation';
+import { to } from './../../.next/static/chunks/[root of the server]__2e1cf5._';
+import SignupPage from '@/app/signup/page';
 
 const Header = () => {
   const pathName = usePathname();
@@ -46,9 +48,11 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <Button className='hidden md:flex bg-neutral-50 py-5 text-secondary/500 px-4 text-base  items-center uppercase'>
-          login / register
-        </Button>
+        <Link href='/signup'>
+          <Button className='hidden md:flex bg-neutral-50 py-5 text-secondary/500 px-4 text-base  items-center uppercase'>
+            login / register
+          </Button>
+        </Link>
       </div>
       <Hamburger className='h-6 md:hidden' />
     </div>
