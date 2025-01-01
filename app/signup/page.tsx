@@ -9,7 +9,7 @@ import Link from "next/link";
 import HeroImage from '@/public/hero3.svg';
 import Logo from '@/public/logo2.svg';
 
-export default function SignupPage() {
+export default function LoginPage() {
   return (
     <div className="flex min-h-screen bg-gray-100">
       <div className="w-[840px] h-[1024px] hidden lg:block">
