@@ -36,8 +36,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${pangram.className} grid grid-rows-[auto_1fr]  h-[100dvh] ${geistMono.variable} antialiased`}
       >
         <Header />
-        <div className='grid grid-[1fr_auto] min-h-[calc(100dvh-75px)] overflow-auto'>
-          {children}
+        <div className='grid grid-rows-[1fr_auto] min-h-[calc(100dvh-75px)] overflow-auto'>
+          <div >{children}</div>
           <Footer />
         </div>
       </body>

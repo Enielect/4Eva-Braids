@@ -5,7 +5,6 @@ import React from 'react';
 import Logo from '@/public/logo.svg';
 import { Hamburger } from '../atoms/icons';
 import Link from 'next/link';
-import { Button } from '../ui/button';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
@@ -46,9 +45,12 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <Button className='hidden md:flex bg-neutral-50 py-5 text-secondary/500 px-4 text-base  items-center uppercase'>
+        <Link
+          href='/login'
+          className='hidden md:flex rounded-md bg-neutral-50 py-2 text-secondary/500 px-5 text-base  items-center uppercase'
+        >
           login / register
-        </Button>
+        </Link>
       </div>
       <Hamburger className='h-6 md:hidden' />
     </div>
