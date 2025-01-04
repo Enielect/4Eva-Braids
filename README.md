@@ -180,16 +180,16 @@ Make sure you have the following installed:
 
 1. Clone the Repository:
 
-git clone https://github.com/Enielect/4Eva-Braids.git
+    git clone https://github.com/Enielect/4Eva-Braids.git
 
-cd into 4Eva-Braids ...
+    cd into 4Eva-Braids ...
 
 2. Install Dependencies:
 
-```bash
-npm install
-# or
-yarn install
+    ```bash
+    npm install
+    # or
+    yarn install
 
 ## Running the development server:
 
