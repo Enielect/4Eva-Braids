@@ -169,13 +169,28 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ### Getting Started
 
-T o set up and run this project locally, follow these steps:
+To set up and run this project locally, follow these steps:
 ## Prerequisites
 
 Make sure you have the following installed:
-.Node.js (LTS recommended) - Download here
-npm or yarn (comes with Node.js, or install yarn via npm install --global yarn)
-First, run the development server:
+- Node.js (LTS recommended) - [Download here] (https://nodejs.org/en)
+- npm or yarn (comes with Node.js, or install yarn via npm install --global yarn)
+
+## Installation
+
+1. Clone the Repository:
+
+git clone <repository-url>
+cd <project-directory>
+
+2. Install Dependencies:
+
+npm install
+# or
+yarn install
+
+## Running the development server:
+
 
 ```bash
 npm run dev
@@ -190,6 +205,7 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
