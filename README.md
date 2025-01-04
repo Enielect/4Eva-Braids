@@ -84,11 +84,11 @@
 
 | Technology   | Purpose | Documentation link   |
 |------------|------------|------------|
-| NextJS | To be updated | To be updated |
-| Tailwind CSS | To be updated | To be updated |
-| Shadcn UI | To be updated | To be updated |
-| Playwright | To be updated | To be updated |
-| Vi test | To be updated | To be updated |
+| NextJS | To be updated | https://nextjs.org/docs |
+| Tailwind CSS | To be updated | https://v2.tailwindcss.com/docs |
+| Shadcn UI | To be updated | https://ui.shadcn.com/docs |
+| Playwright | To be updated | https://playwright.dev/docs/intro |
+| Vi test | To be updated | https://vitest.dev/guide/ |
 
 <br>
 
