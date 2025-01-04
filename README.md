@@ -84,11 +84,11 @@
 
 | Technology   | Purpose | Documentation link   |
 |------------|------------|------------|
-| NextJS | To be updated | https://nextjs.org/docs |
-| Tailwind CSS | To be updated | https://v2.tailwindcss.com/docs |
-| Shadcn UI | To be updated | https://ui.shadcn.com/docs |
-| Playwright | To be updated | https://playwright.dev/docs/intro |
-| Vi test | To be updated | https://vitest.dev/guide/ |
+| NextJS | Easy creation of scalable, fast, SEO friendly react applications | https://nextjs.org/docs |
+| Tailwind CSS | Provide a utility first CSS framework, simplifying web applications styling| https://v2.tailwindcss.com/docs |
+| Shadcn UI | Streamline development by offering pre-built, themeable components that integrate seamlessly with Tailwind CSS for rapid and consistent UI design. | https://ui.shadcn.com/docs |
+| Playwright | Modern end-to-end testing framework designed for reliable automation of web applications across multiple browsers (Chromium, Firefox, and WebKit) | https://playwright.dev/docs/intro |
+| Vi test | Fast, modern testing framework for JavaScript and TypeScript, designed to work seamlessly with Vite. It focuses on speed, simplicity, and deep integration with Vite's ecosystem, making testing efficient and developer-friendly. | https://vitest.dev/guide/ |
 
 <br>
 
