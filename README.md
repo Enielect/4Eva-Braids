@@ -173,15 +173,15 @@ To set up and run this project locally, follow these steps:
 ## Prerequisites
 
 Make sure you have the following installed:
-- Node.js (LTS recommended) - [Download here] (https://nodejs.org/en)
+- Node.js (LTS recommended) - [Download here](https://nodejs.org/en)
 - npm or yarn (comes with Node.js, or install yarn via npm install --global yarn)
 
 ## Installation
 
 1. Clone the Repository:
 
-git clone <repository-url>
-cd <project-directory>
+git clone https://github.com/Enielect/4Eva-Braids.git
+cd 4Eva-Braids
 
 2. Install Dependencies:
 
