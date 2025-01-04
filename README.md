@@ -167,16 +167,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 <br>
 
-### Getting Started
+## Getting Started
 
 To set up and run this project locally, follow these steps:
-## Prerequisites
+### Prerequisites
 
 Make sure you have the following installed:
 - Node.js (LTS recommended) - [Download here](https://nodejs.org/en)
 - npm or yarn (comes with Node.js, or install yarn via npm install --global yarn)
 
-## Installation
+### Installation
 
 1. Clone the Repository:
 
@@ -191,7 +191,7 @@ Make sure you have the following installed:
     # or
     yarn install
 
-## Running the development server:
+### Running the development server:
 
 
 ```bash
