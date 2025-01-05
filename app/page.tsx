@@ -9,7 +9,7 @@ import {
   SocialTwitterIcon,
 } from '../components/atoms/icons';
 import HeroImage from '@/public/hero-image.svg';
-import CustomButton from '../components/atoms/Button';
+import CustomButton, { CustomLink } from '../components/atoms/Button';
 import Model1 from '@/public/Model-1.svg';
 import ForeGround from '@/public/Foreground.png';
 import ImageCard from '../components/Molecules/ImageCard';
@@ -118,7 +118,7 @@ export default function Home() {
           />
         </div>
         <div className='sm:max-w-[60rem] mx-auto my-5'>
-          <CustomButton>View all services</CustomButton>
+          <CustomLink href='/services'>View all services</CustomLink>
         </div>
       </div>
       <section className='pb-8 bg-[#D58A2D1A] px-8'>
@@ -150,7 +150,7 @@ export default function Home() {
           />
         </div>
         <div className='sm:max-w-[60rem] mx-auto my-9'>
-          <CustomButton>View all</CustomButton>
+          <CustomLink href='/blog'>View all</CustomLink>
         </div>
       </section>
       <section className='py-8 px-8'>

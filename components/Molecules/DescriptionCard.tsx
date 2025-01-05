@@ -8,7 +8,7 @@ const DescriptionCard = (props: {
 }) => {
   return (
     <Card
-      className={`bg-neutral-100 border border-neutral-900 px-6 pr-8 py-6 rounded-3xl card-shadow ${props.className}`}
+      className={`bg-neutral-100 shadow-[2px_3px_black] border border-neutral-900 px-6 pr-8 py-6 rounded-3xl card-shadow ${props.className}`}
     >
       <CardTitle className='text-primary/600 text-2xl'>{props.title}</CardTitle>
       <CardDescription className='text-primary/500 mt-3 text-xl'>
