@@ -161,7 +161,7 @@ const BlogContent = () => {
           </div>
         </div>
       </aside>
-      <div className='pt-6 border-t-[3px] border-primary/500'>
+      <div className='pt-6 border-t-[3px] md:hidden border-primary/500'>
         <header className='text-primary/500 text-2xl font-bold'>
           Latest Blogs
         </header>

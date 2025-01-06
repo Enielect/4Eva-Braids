@@ -27,7 +27,7 @@ const TipsCard = (props: {
         {props.description}
       </CardDescription>
       <div className='uppercase py-1 flex gap-3 items-center text-base text-primary/500'>
-        <Link href='#'>Read more</Link> <RightArrow />
+        <Link href='/blog/abcd'>Read more</Link> <RightArrow />
       </div>
     </Card>
   );
