@@ -23,7 +23,7 @@ const Header = () => {
             height={80}
           />
         </div>
-        <span className='uppercase text-xl font-bold'>4EVA Braids</span>
+        <span className='uppercase text-xl font-bold'>4evabraids</span>
       </div>
       <div className='hidden md:flex gap-6 md:gap-8 items-center'>
         <nav>
@@ -34,6 +34,8 @@ const Header = () => {
                   href={item.href}
                   className={`text-white ${
                     (pathName.toLowerCase() === `/${item.name.toLowerCase()}` ||
+                      `${pathName.toLowerCase().split('/')[1]}` ===
+                        item.name.toLowerCase() ||
                       (pathName.toLowerCase() === '/' &&
                         item.name.toLowerCase() === 'home')) &&
                     'after:content-[""] after:absolute after:w-full after:h-[2px] after:bg-white after:bottom-0 after:left-0'
@@ -45,13 +47,13 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <Link
-          href='/login'
-          className='hidden md:flex rounded-md bg-neutral-50 py-2 text-secondary/500 px-5 text-base  items-center uppercase'
-        >
-          login / register
-        </Link>
       </div>
+      <Link
+        href='/login'
+        className='hidden md:flex rounded-md bg-neutral-50 py-2 text-secondary/500 px-5 text-base  items-center uppercase'
+      >
+        login / register
+      </Link>
       <Hamburger className='h-6 md:hidden' />
     </div>
   );

@@ -60,6 +60,7 @@ export default function LoginPage() {
                 <Input
                   id='email'
                   type='email'
+                  value={formState.email}
                   onChange={(e) =>
                     setFormState({ ...formState, email: e.target.value })
                   }
@@ -76,6 +77,7 @@ export default function LoginPage() {
                 <Input
                   id='password'
                   type='password'
+                  value={formState.password}
                   onChange={(e) =>
                     setFormState({ ...formState, password: e.target.value })
                   }
