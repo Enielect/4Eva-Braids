@@ -67,20 +67,16 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
-      <section className='sm:max-w-[60rem] mx-auto'>
+      <section id='book-a-service' className='sm:max-w-[60rem] mx-auto'>
         <div className='text-center'>
-          <Heading className='sm:hidden'>book a service</Heading>
+          <Heading className=''>book a service</Heading>
           <Design className='mx-auto hidden sm:block' />
           <span className='max-w-[300px] py-3 text-neutral-700 hidden sm:inline-block'>
             Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis
             congue quis odio massa ipsum. Amet diam venenatis.
           </span>
         </div>
-        <form
-          className='space-y-4'
-          action='
-        '
-        >
+        <form className='space-y-4' action=''>
           <Input
             type='text'
             placeholder='Full Name'
@@ -104,9 +100,8 @@ const ServicesPage = () => {
           </Button>
         </form>
       </section>
-      <section className='mx-6'>
+      <section className='mx-6 mt-10'>
         <div className='text-center'>
-          <Heading className='sm:hidden'>book a service</Heading>
           <Heading>frequently asked questions</Heading>
           <Design className='mx-auto hidden sm:block' />
           <span className='max-w-[300px] py-3 text-neutral-700 hidden sm:inline-block'>

@@ -43,7 +43,7 @@ const AccordionWrapper = () => {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem
-        value='item-2'
+        value='item-4'
         className='bg-primary/500 rounded-md px-4 sm:text-lg text-white'
       >
         <AccordionTrigger>Is it styled?</AccordionTrigger>
@@ -53,7 +53,7 @@ const AccordionWrapper = () => {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem
-        value='item-3'
+        value='item-5'
         className='bg-primary/500 rounded-md px-4 sm:text-lg text-white'
       >
         <AccordionTrigger>Is it animated?</AccordionTrigger>

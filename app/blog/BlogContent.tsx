@@ -133,7 +133,7 @@ const BlogContent = () => {
             </svg>
           </div>
           <div className='pt-[3rem]'>
-            <header className='text-primary/500 text-2xl font-bold'>
+            <header className='text-primary/500 text-2xl pb-4 font-bold'>
               Latest Blogs
             </header>
             <div className='gap-y-8 grid'>

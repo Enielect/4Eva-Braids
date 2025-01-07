@@ -9,7 +9,7 @@ import {
   SocialTwitterIcon,
 } from '../components/atoms/icons';
 import HeroImage from '@/public/hero-image.svg';
-import CustomButton, { CustomLink } from '../components/atoms/Button';
+import { CustomLink } from '../components/atoms/Button';
 import Model1 from '@/public/Model-1.svg';
 import ForeGround from '@/public/Foreground.png';
 import ImageCard from '../components/Molecules/ImageCard';
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         <div className='order-2 h-full sm:px-16 md:px-10 sm:flex flex-col justify-between md:justify-around lg:justify-between py-8 sm:py-0 lg:py-28'>
           <div className='px-3 '>
-            <span className='uppercase block text-primary/500 text-5xl lg:text-7xl md:text-left  text-center py-3'>
+            <span className='uppercase block font-bold text-primary/500 text-5xl lg:text-7xl md:text-left  text-center py-3'>
               hair braiding & dreadlocks
             </span>
             <span className='uppercase block text-neutral-700 text-2xl sm:text-3xl py-2 max-md:mx-auto md:text-left sm:max-w-[37rem] text-center'>
@@ -45,7 +45,7 @@ export default function Home() {
               Get your perfect look with a free sylist consultation
             </span>
             <div className='sm:min-w-[180px]'>
-              <CustomButton>Book Now</CustomButton>
+              <CustomLink href='/services#book-a-service'>Book Now</CustomLink>
             </div>
           </div>
         </div>
@@ -157,11 +157,11 @@ export default function Home() {
         <div className='uppercase py-6 text-3xl text-center'>Our works</div>
         <div className=''></div>
         <div className='sm:max-w-[60rem] mx-auto my-9'>
-          <CustomButton>View Complete gallery</CustomButton>
+          <CustomLink href='/gallery'>View Complete gallery</CustomLink>
         </div>
       </section>
-      <section className='mx-14 relative max-md:flex-col gap-4 justify-between sm:max-w-[80vw] sm:mx-auto flex md:my-[130px]'>
-        <div className='sm:max-w-[30rem] relative sm:-right-12 max-sm:my-10'>
+      <section className=' relative max-md:flex-col gap-4 justify-between sm:max-w-[80vw] sm:mx-auto flex md:my-[130px]'>
+        <div className='mx-14 sm:max-w-[30rem] relative sm:-right-12 max-sm:my-10'>
           <div className='absolute -z-10 bg-[#F3ECD5] -left-10 max-sm:-bottom-7 sm:-bottom-8 rounded-md max-sm:w-[80%] sm:w-[34vw] h-[80%]'></div>
           <div className='h-full w-full md:w-[40vw] rounded-md overflow-hidden'>
             <Image
@@ -173,7 +173,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className='px-6 md:px-8 max-md:my-10 max-sm:mt-3 max-sm:mb-10 md:relative right-12 top-10 py-8 rounded-xl sm:max-w-[33rem] lg:w-[45vw] md:w-[40vw] lg:max-w-[45rem] bg-[#f3ecd5]'>
+        <div className='mx-5 px-6 md:px-8 max-md:my-10 max-sm:mt-3 max-sm:mb-10 md:relative right-12 top-10 py-8 rounded-xl sm:max-w-[33rem] lg:w-[45vw] md:w-[40vw] lg:max-w-[45rem] bg-[#f3ecd5]'>
           <div className='uppercase py-6 text-3xl text-center md:sm:text-left '>
             get in touch
           </div>
