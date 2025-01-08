@@ -12,7 +12,7 @@ const BookingsButton = () => {
       <div
         className={`transition-all duration-300 delay-[6000ms] ${
           show ? 'flex font-bold flex-col' : 'hidden'
-        } gap-5 fixed bottom-[6rem] right-12`}
+        } gap-5 fixed bottom-[6rem] max-sm:right-5 sm:right-10 md:right-12`}
       >
         <Button
           href='https://wa.me/2347062453170'
@@ -63,9 +63,9 @@ function Book(props: ButtonProp) {
   return (
     <button
       onClick={props.onClick}
-      className={`transition-all duration-300 w-[145px] ${
+      className={`transition-all duration-300 min-w-[145px] ${
         props.show ? 'bg-white' : 'bg-[#EF4444]'
-      } flex items-center text-lg px-5 py-3 font-bold rounded-full fixed bottom-5 right-12 text-white`}
+      } flex items-center text-lg px-5 py-3 font-bold rounded-full fixed bottom-5 right-5 sm:right-10  md:right-12 text-white`}
     >
       {!props.show ? (
         <span className='flex w-full'>
