@@ -3,6 +3,8 @@ import localFont from 'next/font/local';
 import './globals.css';
 import Header from '../components/Molecules/Header';
 import Footer from '../components/Molecules/Footer';
+import { Toaster } from '@/components/ui/sonner';
+import BookingsButton from '@/components/Molecules/BookingsButton';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -37,9 +39,12 @@ export default function RootLayout({
       >
         <Header />
         <div className='grid grid-rows-[1fr_auto] min-h-[calc(100dvh-75px)] overflow-auto'>
-          <div >{children}</div>
+          <div>{children}</div>
           <Footer />
         </div>
+
+        <Toaster />
+        <BookingsButton />
       </body>
     </html>
   );

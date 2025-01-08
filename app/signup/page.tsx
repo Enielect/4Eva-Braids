@@ -9,18 +9,23 @@ import Link from 'next/link';
 import HeroImage from '@/public/hero3.svg';
 import Logo from '@/public/logo2.svg';
 import { signUpAction } from '../login/actions/auth';
-import { useActionState, useState } from 'react';
+import { useActionState, useEffect, useState } from 'react';
 import { Loader2 } from 'lucide-react';
+import InputFIeld from '@/components/Molecules/InputFIeld';
+import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
 
 type FormState = {
   firstName: string;
   lastName: string;
   email: string;
   password: string;
+  phoneNumber: string;
   confirmPassword: string;
 };
 
-export default function LoginPage() {
+export default function SignUpPage() {
+  const router = useRouter();
   const [state, action, pending] = useActionState(signUpAction, undefined);
   const [formState, setFormState] = useState<FormState>({
     email: '',
@@ -28,9 +33,30 @@ export default function LoginPage() {
     firstName: '',
     lastName: '',
     confirmPassword: '',
+    phoneNumber: '',
   });
+  useEffect(() => {
+    if (state?.errorMessage)
+      toast.error(
+        state?.errorMessage || 'An error occured when trying to signup'
+      );
+    if (state?.message) {
+      toast.success(state?.message);
+      //clear input field
+      setFormState({
+        email: '',
+        password: '',
+        firstName: '',
+        lastName: '',
+        confirmPassword: '',
+        phoneNumber: '',
+      });
+      router.push('/');
+    }
+    //eslint-disable-next-line
+  }, [state]);
   return (
-    <div className='flex min-h-screen  lg:grid grid-cols-[6fr_4fr] bg-gray-100'>
+    <div className='flex min-h-screen md:text-lg lg:grid grid-cols-[6fr_4fr] bg-gray-100'>
       <div className='h-screen hidden lg:block'>
         <Image
           src={HeroImage}
@@ -63,12 +89,13 @@ export default function LoginPage() {
             <form action={action} className='space-y-4'>
               <div>
                 <Input
-                  id='name'
+                  id='first_ame'
                   value={formState.firstName}
                   onChange={(e) =>
                     setFormState({ ...formState, firstName: e.target.value })
                   }
                   type='name'
+                  name='first_name'
                   placeholder='First name'
                   className='mt-1'
                 />
@@ -80,13 +107,14 @@ export default function LoginPage() {
               </div>
               <div>
                 <Input
-                  id='name'
+                  id='last_name'
                   type='name'
                   value={formState.lastName}
                   onChange={(e) =>
                     setFormState({ ...formState, lastName: e.target.value })
                   }
                   placeholder='Last name'
+                  name='last_name'
                   className='mt-1'
                 />
                 {state?.errors?.last_name && (
@@ -104,6 +132,7 @@ export default function LoginPage() {
                     setFormState({ ...formState, email: e.target.value })
                   }
                   placeholder='Email address'
+                  name='email'
                   className='mt-1'
                 />
                 {state?.errors?.email && (
@@ -113,18 +142,26 @@ export default function LoginPage() {
                 )}
               </div>
               <div>
-                <Input
+                {/* <Input
                   id='password'
                   value={formState.password}
                   onChange={(e) =>
                     setFormState({ ...formState, password: e.target.value })
                   }
                   type='password'
+                  name='password'
                   placeholder='Enter Password'
-                  className='mt-1'
+                  className='mt-1 '
+                /> */}
+                <InputFIeld
+                  showPassword={true} //wrong type!!!!
+                  // setShowPassword={setShowPassword}
+                  id='password'
+                  name='password'
+                  placeholder='Enter Password'
                 />
                 {state?.errors?.password && (
-                  <div className='text-red-500 text-sm pt-1'>
+                  <div className='text-red-500 max-sm:text-sm pt-1'>
                     <p>Password must:</p>
                     <ul>
                       {state?.errors?.password?.map((error) => (
@@ -136,14 +173,19 @@ export default function LoginPage() {
               </div>
               <div>
                 <Input
-                  id='password'
-                  type='password'
-                  placeholder='Confirm password'
+                  id='phone_number'
+                  type='tel'
+                  value={formState.phoneNumber}
+                  onChange={(e) =>
+                    setFormState({ ...formState, phoneNumber: e.target.value })
+                  }
+                  name='phone_number'
+                  placeholder='Phone Number'
                   className='mt-1'
                 />
-                {state?.errors?.confirmPassword && (
+                {state?.errors?.phone_number && (
                   <p className='text-red-500 text-sm pt-1'>
-                    {state.errors.confirmPassword}
+                    {state.errors.phone_number}
                   </p>
                 )}
               </div>
@@ -166,16 +208,12 @@ export default function LoginPage() {
                 type='submit'
                 className='w-full bg-[#C68E38] hover:bg-[#B07C32] text-white rounded-full'
               >
-                {pending ? (
-                  <Loader2 className='animate-spin' />
-                ) : (
-                  'Continue to Sign Up'
-                )}
+                {pending ? <Loader2 className='animate-spin' /> : ' Sign Up'}
               </Button>
               {/* <a href='/verification'>Continue to Sign Up</a> */}{' '}
               {/** this leads to the otp page */}
             </form>
-            <div className='text-center text-sm'>
+            <div className='text-center max-sm:text-sm'>
               <p className='mt-4'>
                 Already have an account?{' '}
                 <Link href='/login' className='text-[#F4A261] hover:underline'>

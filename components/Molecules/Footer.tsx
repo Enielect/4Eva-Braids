@@ -11,11 +11,11 @@ const Footer = () => {
         <Link href='https://www.tiktok.com/@4evabraids'>
           <TikTok />
         </Link>
-        <Link href='https://wa.me/2348130000000'>
+        <Link href='https://wa.me/2347062453170'>
           <Whatsapp />
         </Link>
       </div>
-      <div className='flex gap-4 text-xl justify-center flex-wrap'>
+      <div className='flex gap-4 text-xl max-sm:text-base justify-center flex-wrap'>
         {['home', 'about', 'services', 'blog', 'gallery', 'contact us'].map(
           (ele, i) => (
             <Link
@@ -52,11 +52,12 @@ const Footer = () => {
   );
 };
 
-function Instagram() {
+export function Instagram(props: { size?: string }) {
   return (
     <svg
       width='30'
       height='31'
+      className={`max-sm:h-7 ${props.size}`}
       viewBox='0 0 30 31'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
@@ -94,6 +95,7 @@ const TikTok = () => (
     fill='white'
     width='30'
     height='31'
+    className='max-sm:h-7'
     viewBox='0 0 24 24'
     xmlns='http://www.w3.org/2000/svg'
     // xml:space='preserve'
@@ -102,12 +104,13 @@ const TikTok = () => (
   </svg>
 );
 
-function Whatsapp() {
+export function Whatsapp(props: { size?: string }) {
   return (
     <svg
       fill='white'
       width='30'
       height='31'
+      className={`max-sm:h-7 ${props.size}`}
       viewBox='0 0 16 16'
       xmlns='http://www.w3.org/2000/svg'
     >

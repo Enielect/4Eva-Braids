@@ -17,6 +17,25 @@ export const Hamburger = (props: { className?: string }) => (
   </svg>
 );
 
+export const X = (props: { className?: string }) => (
+  <svg
+    width='40'
+    height='40'
+    viewBox='0 0 40 40'
+    fill='none'
+    className={props.className}
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path
+      d='M10 30.001L30 10.001M10 10.001L30 30.001'
+      stroke='white'
+      strokeWidth='2.5006'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    />
+  </svg>
+);
+
 export const RightArrow = (props: { className?: string }) => (
   <svg
     width='18'

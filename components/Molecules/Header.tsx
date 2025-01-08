@@ -3,13 +3,15 @@
 import Image from 'next/image';
 import React from 'react';
 import Logo from '@/public/logo.svg';
-import { Hamburger } from '../atoms/icons';
+import { Hamburger, X } from '../atoms/icons';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Sidebar from './Sidebar';
 
 const Header = () => {
+  const [navOpen, setNavOpen] = React.useState(false);
   const pathName = usePathname();
-  console.log(pathName);
+
   return (
     <div className='bg-primary/500 px-4 md:px-8 py-5 flex items-center justify-between'>
       {/* logo */}
@@ -23,7 +25,7 @@ const Header = () => {
             height={80}
           />
         </Link>
-        <span className=' text-xl font-bold'>4evabraids</span>
+        <span className='max-sm:hidden text-xl font-bold'>4evabraids</span>
       </div>
       <div className='hidden md:flex gap-6 md:gap-8 items-center'>
         <nav>
@@ -54,7 +56,10 @@ const Header = () => {
       >
         login / register
       </Link>
-      <Hamburger className='h-6 md:hidden' />
+      <button onClick={() => setNavOpen(!navOpen)} className='md:hidden'>
+        {navOpen ? <X /> : <Hamburger className='h-6 ' />}
+      </button>
+      <Sidebar isOpen={navOpen} setNavOpen={setNavOpen} />
     </div>
   );
 };
@@ -63,7 +68,7 @@ export default Header;
 
 type TNavItem = { name: string; href: string };
 
-const navItems: TNavItem[] = [
+export const navItems: TNavItem[] = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },

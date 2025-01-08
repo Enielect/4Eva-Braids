@@ -13,6 +13,16 @@ import AccordionWrapper from '@/components/Molecules/AccordionWrapper';
 import Heading from '@/components/Molecules/Heading';
 
 const ServicesPage = () => {
+  const [formState, setFormState] = React.useState({
+    full_name: '',
+    email: '',
+    phone_number: '',
+    location: '',
+    service_type: '',
+    date: '',
+    time: '',
+    hairstyle: '',
+  });
   return (
     <div className='mx-8 my-6'>
       <header className='text-center'>
@@ -79,24 +89,97 @@ const ServicesPage = () => {
         <form className='space-y-4' action=''>
           <Input
             type='text'
+            value={formState.full_name}
+            onChange={(e) =>
+              setFormState({ ...formState, full_name: e.target.value })
+            }
             placeholder='Full Name'
             className='!py-3'
             name='full_name'
           />
-          <Input type='email' placeholder='Email' name='email' />
-          <Input type='number' placeholder='Phone Number' name='phone_number' />
-          {/* <Select onValueChange={() => {}} defaultValue={''}>
-            <SelectTrigger>
-              <SelectValue placeholder='Select a verified email to display' />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value='m@example.com'>m@example.com</SelectItem>
-              <SelectItem value='m@google.com'>m@google.com</SelectItem>
-              <SelectItem value='m@support.com'>m@support.com</SelectItem>
-            </SelectContent>
-          </Select> */}
+          <Input
+            type='email'
+            value={formState.email}
+            onChange={(e) => {
+              setFormState({ ...formState, email: e.target.value });
+            }}
+            placeholder='Email Address'
+            name='email'
+          />
+          <Input
+            type='number'
+            value={formState.phone_number}
+            onChange={(e) => {
+              setFormState({ ...formState, phone_number: e.target.value });
+            }}
+            placeholder='Phone Number'
+            name='phone_number'
+          />
+          <Input
+            type='text'
+            value={formState.location}
+            onChange={(e) => {
+              setFormState({ ...formState, location: e.target.value });
+            }}
+            placeholder='Location'
+            name='location'
+          />
+          {/* <div className='relative max-h-[200px]'>
+            <Select onValueChange={() => {}} defaultValue={'man'}>
+              <SelectTrigger>
+                <SelectValue placeholder='Select a verified email to display' />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value='m@example.com'>m@example.com</SelectItem>
+                <SelectItem value='m@google.com'>m@google.com</SelectItem>
+                <SelectItem value='m@support.com'>m@support.com</SelectItem>
+              </SelectContent>
+            </Select>
+          </div> */}
+          <select
+            name='service_type'
+            className='w-full py-3 px-2 rounded-md'
+            value={formState.service_type}
+            onChange={(e) => {
+              setFormState({ ...formState, service_type: e.target.value });
+            }}
+            id=''
+          >
+            <option value='' disabled>
+              Select a service
+            </option>
+            <option value='service1'>Service 1</option>
+            <option value='service2'>Service 2</option>
+            <option value='service3'>Service 3</option>
+          </select>
+          <div className='flex gap-4'>
+            <Input
+              type='date'
+              placeholder='Date'
+              onChange={(e) => {
+                setFormState({ ...formState, date: e.target.value });
+              }}
+              value={formState.date}
+            />
+            <Input
+              type='time'
+              placeholder='Time'
+              value={formState.time}
+              onChange={(e) => {
+                setFormState({ ...formState, time: e.target.value });
+              }}
+            />
+          </div>
+          <textarea
+            placeholder='Style Description'
+            className='border border-neutral-300 rounded-md p-2 w-full px-3'
+            value={formState.hairstyle}
+            onChange={(e) => {
+              setFormState({ ...formState, hairstyle: e.target.value });
+            }}
+          />
           <Button className='uppercase w-full text-center rounded-md bg-primary/500'>
-            submit
+            schedule appointment
           </Button>
         </form>
       </section>
