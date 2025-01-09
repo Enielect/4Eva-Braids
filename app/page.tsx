@@ -18,7 +18,7 @@ import OfferCard from '../components/Molecules/OfferCard';
 import TipsCard from '../components/Molecules/TipsCard';
 import AdressDescription from '../components/Molecules/AdressDescription';
 import { fetchBlogs } from '@/baseUrl';
-import { TBlogs } from './blog/page';
+import { TBlogs } from '@/lib/types';
 
 export default async function Home() {
   //this should only be a selected number of blogs

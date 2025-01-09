@@ -1,24 +1,10 @@
 import React from 'react';
 import TipsCard from '../../components/Molecules/TipsCard';
 import { fetchBlogs } from '@/baseUrl';
-
-
-
-export type TBlogs = {
-  preview: string;
-  title: string;
-  comments: unknown[];
-  date_created: string;
-  date_updated: string;
-  likes: number;
-  thumbnail: string;
-  user_id: string;
-  _id: string;
-};
+import { TBlogs } from '@/lib/types';
 
 const Blogpage = async () => {
   const blogs: TBlogs[] = await fetchBlogs();
-  console.log(blogs);
   return (
     <div className='my-10 pb-8 px-8'>
       <div className='gap-y-8 grid sm:grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center mb-6'>
