@@ -1,17 +1,8 @@
 import React from 'react';
 import TipsCard from '../../components/Molecules/TipsCard';
-import { baseUrl } from '@/baseUrl';
+import { fetchBlogs } from '@/baseUrl';
 
-export const fetchBlogs = async () => {
-  try {
-    const res = await fetch(`${baseUrl}/blogs`);
-    const data = await res.json();
-    return data;
-    console.log(data);
-  } catch (err) {
-    console.log(err);
-  }
-};
+
 
 export type TBlogs = {
   preview: string;

@@ -17,8 +17,12 @@ import DescriptionCard from '../components/Molecules/DescriptionCard';
 import OfferCard from '../components/Molecules/OfferCard';
 import TipsCard from '../components/Molecules/TipsCard';
 import AdressDescription from '../components/Molecules/AdressDescription';
+import { fetchBlogs } from '@/baseUrl';
+import { TBlogs } from './blog/page';
 
-export default function Home() {
+export default async function Home() {
+  //this should only be a selected number of blogs
+  const blogs: TBlogs[] = await fetchBlogs();
   return (
     <main className=''>
       <div className='bg-primary/50 md:grid grid-cols-2 md:grid-cols-[1fr_auto] lg:grid-cols-2 justify-between'>
@@ -128,26 +132,15 @@ export default function Home() {
         </div>
         {/* <div className='mt-5 gap-y-12 grid sm:grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center'> */}
         <div className='mt-5 flex max-sm:flex-col flex-wrap gap-4 md:mx-10 justify-center items-center'>
-          <TipsCard
-            image={Model1}
-            title='BLOG TITLE'
-            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-          />
-          <TipsCard
-            image={Model1}
-            title='BLOG TITLE'
-            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-          />
-          <TipsCard
-            image={Model1}
-            title='BLOG TITLE'
-            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-          />
-          <TipsCard
-            image={Model1}
-            title='BLOG TITLE'
-            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-          />
+          {blogs.map((blog) => (
+            <TipsCard
+              slug={blog._id}
+              key={blog._id}
+              image={blog.thumbnail}
+              title={blog.title}
+              description={blog.preview}
+            />
+          ))}
         </div>
         <div className='sm:max-w-[60rem] mx-auto my-9'>
           <CustomLink href='/blog'>View all</CustomLink>

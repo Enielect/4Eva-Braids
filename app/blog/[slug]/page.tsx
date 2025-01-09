@@ -1,6 +1,6 @@
-import { baseUrl } from '@/baseUrl';
+import { baseUrl, fetchBlogs } from '@/baseUrl';
 import BlogContent from '../BlogContent';
-import { TBlogs, fetchBlogs } from '../page';
+import { TBlogs } from '../page';
 
 const fetchBlog = async (slug: string) => {
   try {
