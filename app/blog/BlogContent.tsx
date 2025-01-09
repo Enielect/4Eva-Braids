@@ -2,12 +2,34 @@
 import React from 'react';
 import TipsCard from '@/components/Molecules/TipsCard';
 import { ChevronLeft } from 'lucide-react';
-import Model1 from '@/public/Model-1.svg';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
+import { TBlog } from './[slug]/page';
+import { TBlogs } from './page';
 
-const BlogContent = () => {
+const MONTHS = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+]
+
+const BlogContent = ({
+  blog,
+  otherBlogs,
+}: {
+  blog: TBlog;
+  otherBlogs: TBlogs[];
+}) => {
   const router = useRouter();
   return (
     <section className='px-10 md:grid py-10 gap-5 grid-cols-[1fr_25%]'>
@@ -21,14 +43,18 @@ const BlogContent = () => {
         </header>
         <main className='py-10'>
           <header className='text-xl md:text-3xl font-bold text-primary/500'>
-            Blog Post Title Goes HEre
+            {blog.title}
           </header>
           {/* date of posting */}
-          <span className='text-[#D4D4D4] py-3 block'>March 21, 2024</span>
+          <span className='text-[#D4D4D4] py-3 block'>
+            {MONTHS[new Date(blog.date_created).getMonth()]},{' '}
+            {new Date(blog.date_created).getDate()}{' '}
+            {new Date(blog.date_created).getFullYear()}
+          </span>
           {/* My Post: {slug} */}
 
           <div className='py-4'>
-            <p>
+            {/* <p>
               Lorem ipsum dolor sit amet consectetur. Massa sed nulla lobortis
               maecenas diam sodales nec. Et magna elit ipsum consectetur tellus
               eget eget. Nibh scelerisque in ante adipiscing est est ac ornare.
@@ -79,7 +105,8 @@ const BlogContent = () => {
               integer leo feugiat tellus ut pharetra urna. Nisl quisque egestas
               ut sem in sit. Enim et nec pellentesque non eleifend morbi
               facilisis tristique.
-            </p>
+            </p> */}
+            {blog.body}
           </div>
 
           {/* Comments */}
@@ -109,6 +136,7 @@ const BlogContent = () => {
             <svg
               width='24'
               height='2654'
+              className='h-fit'
               viewBox='0 0 24 2654'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
@@ -132,31 +160,20 @@ const BlogContent = () => {
               />
             </svg>
           </div>
-          <div className='pt-[3rem]'>
-            <header className='text-primary/500 text-2xl pb-4 font-bold'>
+          <div className='pt-[3rem] h-fit'>
+            <header className='text-primary/500  text-2xl pb-4 font-bold'>
               Latest Blogs
             </header>
             <div className='gap-y-8 grid'>
-              <TipsCard
-                image={Model1}
-                title='BLOG TITLE'
-                description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-              />
-              <TipsCard
-                image={Model1}
-                title='BLOG TITLE'
-                description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-              />
-              <TipsCard
-                image={Model1}
-                title='BLOG TITLE'
-                description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-              />
-              <TipsCard
-                image={Model1}
-                title='BLOG TITLE'
-                description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-              />
+              {otherBlogs.map((blog) => (
+                <TipsCard
+                  slug={blog._id}
+                  key={blog._id}
+                  image={blog.thumbnail}
+                  title={blog.title}
+                  description={blog.preview}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -166,26 +183,16 @@ const BlogContent = () => {
           Latest Blogs
         </header>
         <div className='gap-y-8 grid'>
-          <TipsCard
-            image={Model1}
-            title='BLOG TITLE'
-            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-          />
-          <TipsCard
-            image={Model1}
-            title='BLOG TITLE'
-            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-          />
-          <TipsCard
-            image={Model1}
-            title='BLOG TITLE'
-            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-          />
-          <TipsCard
-            image={Model1}
-            title='BLOG TITLE'
-            description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-          />
+          {/* These are not fetched from an api endpoint that provides the latest blogs yet */}
+          {otherBlogs.map((blog) => (
+            <TipsCard
+              slug={blog._id}
+              key={blog._id}
+              image={blog.thumbnail}
+              title={blog.title}
+              description={blog.preview}
+            />
+          ))}
         </div>
       </div>
     </section>

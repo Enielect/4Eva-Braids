@@ -74,7 +74,7 @@ export default function SignUpPage() {
         </div>
 
         <Card className='shadow-none border-0'>
-          <CardContent className='mt-16 space-y-6'>
+          <CardContent className='md:mt-16 space-y-6'>
             <div className='mb-8 text-center'>
               <Image
                 src={Logo}

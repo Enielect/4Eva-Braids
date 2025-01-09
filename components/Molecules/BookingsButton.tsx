@@ -12,7 +12,7 @@ const BookingsButton = () => {
       <div
         className={`transition-all duration-300 delay-[6000ms] ${
           show ? 'flex font-bold flex-col' : 'hidden'
-        } gap-5 fixed bottom-[6rem] max-sm:right-5 sm:right-10 md:right-12`}
+        } gap-5 fixed z-40 bottom-[6rem] max-sm:right-5 sm:right-10 md:right-12`}
       >
         <Button
           href='https://wa.me/2347062453170'

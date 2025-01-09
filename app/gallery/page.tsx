@@ -12,6 +12,15 @@ import {
 import React from 'react';
 import { InstagramEmbed, TikTokEmbed } from 'react-social-media-embed';
 
+const TikTokLinks = [
+  'https://www.tiktok.com/@4evabraids/video/7455407154485333253',
+  'https://www.tiktok.com/@4evabraids/video/7454109868232838406',
+  'https://www.tiktok.com/@4evabraids/video/7453795544880712965',
+  'https://www.tiktok.com/@4evabraids/video/7451494793391164678',
+  'https://www.tiktok.com/@4evabraids/video/7448912359688637701',
+  'https://www.tiktok.com/@4evabraids/video/7443714961756540216',
+];
+
 const GalleryPage = () => {
   const [isClient, setIsClient] = React.useState(false);
 
@@ -38,13 +47,11 @@ const GalleryPage = () => {
             height={500}
           />
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <TikTokEmbed
-            url='https://www.tiktok.com/@epicgardening/video/7055411162212633903'
-            width={325}
-            height={500}
-          />
-        </div>
+        {TikTokLinks.map((link, i) => (
+          <div key={i} style={{ display: 'flex', justifyContent: 'center' }}>
+            <TikTokEmbed url={link} width={325} height={500} />
+          </div>
+        ))}
       </div>
     </section>
   );
