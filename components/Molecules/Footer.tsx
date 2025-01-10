@@ -90,7 +90,7 @@ export function Instagram(props: { size?: string }) {
   );
 }
 
-const TikTok = () => (
+export const TikTok = () => (
   <svg
     fill='white'
     width='30'
