@@ -3,12 +3,12 @@
 import Image from 'next/image';
 import React from 'react';
 import Logo from '@/public/logo.svg';
-import { Hamburger, X } from '../atoms/icons';
+import { DummyProfile, Hamburger, X } from '../atoms/icons';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Sidebar from './Sidebar';
 
-const Header = () => {
+const Header = ({ firstName }: { firstName: string }) => {
   const [navOpen, setNavOpen] = React.useState(false);
   const pathName = usePathname();
 
@@ -50,12 +50,23 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <Link
-        href='/login'
-        className='hidden md:flex rounded-md bg-neutral-50 py-2 text-secondary/500 px-5 text-base  items-center uppercase'
-      >
-        login / register
-      </Link>
+      {firstName?.length > 0 ? (
+        <div className='flex items-center text-right'>
+          <div className='flex justify-end items-center text-white sm:items-end flex-col'>
+            <span className='md:text-right font-medium'>Hello</span>
+            <span className='font-bold'>{firstName}</span>
+          </div>
+
+          <DummyProfile calssName='h-10 hidden sm:block' />
+        </div>
+      ) : (
+        <Link
+          href='/login'
+          className='hidden md:flex rounded-md bg-neutral-50 py-2 text-secondary/500 px-5 text-base  items-center uppercase'
+        >
+          login / register
+        </Link>
+      )}
       <button onClick={() => setNavOpen(!navOpen)} className='md:hidden'>
         {navOpen ? <X /> : <Hamburger className='h-6 ' />}
       </button>

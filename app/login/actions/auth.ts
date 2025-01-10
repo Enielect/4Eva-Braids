@@ -2,14 +2,13 @@
 
 import { baseUrl } from '@/baseUrl';
 import { LoginSchema, SignUpSchema } from '@/lib/definitions';
-import { revalidatePath } from 'next/cache';
-import { redirect } from 'next/navigation';
+import { SnakeCaseToCamelCase } from '@/lib/utils';
+import { cookies } from 'next/headers';
 
 export async function loginAction(prev: unknown, formData: FormData) {
   console.log('LoginAction', formData);
-  //validate form
   const validatedFields = LoginSchema.safeParse({
-    email: formData.get('email'),
+    username: formData.get('username'),
     password: formData.get('password'),
   });
   if (!validatedFields.success) {
@@ -17,17 +16,59 @@ export async function loginAction(prev: unknown, formData: FormData) {
   }
   console.log('run boundary');
 
-  //run the endpoint  here for user login
+  try {
+    const { username, password } = validatedFields.data;
+    const formattedData = new URLSearchParams({ username, password });
+    // const body = JSON.stringify({ username, password });
+    console.log(formattedData.toString(), 'this is the formatted data');
 
-  revalidatePath('/', 'layout');
-  redirect('/');
+    const response = await fetch(`${baseUrl}/auth/token`, {
+      method: 'POST',
+      headers: {
+        accept: 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: formattedData.toString(),
+    });
 
-  // console.log("Email", email);
+    if (response.ok) {
+      const data = await response.json();
+      const { token_type, access_token } = data;
+      (await cookies()).set('access_token', access_token);
+      (await cookies()).set('token_type', token_type);
+      console.log(data, 'this is the data');
+
+      //set the accessToken in Cookies
+      return { message: 'Login successful' };
+    }
+
+    const data = await response.json();
+
+    console.log(data.detail, 'this is the data detail');
+
+    if (typeof data.detail === 'string') {
+      return {
+        errorMessage: data.detail || 'An error occured when trying to login',
+      };
+    }
+
+    const error = data.detail[0];
+
+    return {
+      errorMessage:
+        (error.loc[0] === 'body'
+          ? `${SnakeCaseToCamelCase(error.loc[1])} ${error.msg}`
+          : error.msg) || 'An error occured when trying to login',
+    };
+  } catch (err) {
+    console.log(err, 'error occured during login');
+    return { errorMessage: 'An error occured' };
+  }
 }
 
 export async function signUpAction(prev: unknown, formData: FormData) {
   console.log('I qm in the signup function');
-  console.log('LoginAction', formData);
+  console.log('SignUpAction', formData);
   //validate form firld]
   const validatedFields = SignUpSchema.safeParse({
     email: formData.get('email'),
@@ -71,21 +112,26 @@ export async function signUpAction(prev: unknown, formData: FormData) {
       return { message: 'SignUp successful' };
     }
     const data = await response.json();
+
+    console.log(data.detail, 'this is the data detail');
+    if (typeof data.detail === 'string') {
+      return {
+        errorMessage: data.detail || 'An error occured when trying to signup',
+      };
+    }
+    const error = data.detail[0];
     return {
-      errorMessage: data.detail || 'An error occured when trying to signup',
+      errorMessage:
+        (error.loc[0] === 'body'
+          ? `${SnakeCaseToCamelCase(error.loc[1])} ${error.msg}`
+          : error.msg) || 'An error occured when trying to signup',
     };
-    // toast(data.detail || 'An error occured when trying to signup');
-    // console.log(data);
   } catch (err) {
-    console.log('I am in the error block');
-    console.log(err, 'error occured during signup');
+    console.error(err, 'error occured during signup');
     return { errorMessage: 'An error occured' };
 
     // [cause]: [Error [ConnectTimeoutError]: Connect Timeout Error] {
     //   code: 'UND_ERR_CONNECT_TIMEOUT'
     // } //time out error
   }
-
-  // revalidatePath('/', 'layout');
-  // redirect('/');
 }

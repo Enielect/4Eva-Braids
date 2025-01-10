@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Instagram, Whatsapp } from './Footer';
 import { X } from 'lucide-react';
 import Link from 'next/link';
+import { ClickStatMarker } from '@/app/action/bookings';
 
 const BookingsButton = () => {
   const [show, setShow] = useState(false);
@@ -15,6 +16,7 @@ const BookingsButton = () => {
         } gap-5 fixed z-40 bottom-[6rem] max-sm:right-5 sm:right-10 md:right-12`}
       >
         <Button
+          onClick={() => ClickStatMarker('W')}
           href='https://wa.me/2347062453170'
           className='bg-green-600 flex text-white items-center gap-3 uppercase'
         >
@@ -22,6 +24,7 @@ const BookingsButton = () => {
           <Whatsapp size='!h-6' />
         </Button>
         <Button
+          onClick={() => ClickStatMarker('G')}
           href='https://www.instagram.com/4evabraids/'
           className='bg-red-500 flex text-white items-center gap-3 uppercase'
         >
@@ -46,11 +49,13 @@ type LinkProp = {
   children?: React.ReactNode;
   className?: string;
   href: string;
-};
+} & React.LinkHTMLAttributes<HTMLAnchorElement>;
 
 function Button(props: LinkProp) {
   return (
     <Link
+      target='_blank'
+      {...props}
       href={props.href}
       className={`px-5 py-2 rounded-full ${props.className}`}
     >

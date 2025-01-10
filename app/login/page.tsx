@@ -8,20 +8,40 @@ import Image from 'next/image';
 import Link from 'next/link';
 import HeroImage from '@/public/hero2.svg';
 import Logo from '@/public/logo2.svg';
-import { useActionState, useState } from 'react';
+import { useActionState, useEffect, useState } from 'react';
 import { loginAction } from './actions/auth';
 import { Loader2 } from 'lucide-react';
+import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
 
 interface FormState {
   email: string;
   password: string;
 }
 export default function LoginPage() {
+  const router = useRouter();
   const [state, action, pending] = useActionState(loginAction, undefined);
   const [formState, setFormState] = useState<FormState>({
     email: '',
     password: '',
   });
+
+  useEffect(() => {
+    if (state?.errorMessage)
+      toast.error(
+        state?.errorMessage || 'An error occured when trying to signup'
+      );
+    if (state?.message) {
+      toast.success(state?.message || 'SignUp successful');
+      //clear input field
+      setFormState({
+        email: '',
+        password: '',
+      });
+      router.push('/');
+    }
+    //eslint-disable-next-line
+  }, [state]);
   return (
     <div className='flex min-h-screen lg:grid grid-cols-[6fr_4fr] bg-gray-100'>
       <div className=' h-screen hidden lg:block'>
@@ -59,7 +79,9 @@ export default function LoginPage() {
               <div>
                 <Input
                   id='email'
+                  required
                   type='email'
+                  name='username'
                   value={formState.email}
                   onChange={(e) =>
                     setFormState({ ...formState, email: e.target.value })
@@ -67,16 +89,18 @@ export default function LoginPage() {
                   placeholder='Email address'
                   className='mt-1'
                 />
-                {state?.errors?.email && (
+                {state?.errors?.username && (
                   <p className='text-red-500 text-sm pt-1'>
-                    {state.errors.email}
+                    {state.errors.username}
                   </p>
                 )}
               </div>
               <div>
                 <Input
+                  required
                   id='password'
                   type='password'
+                  name='password'
                   value={formState.password}
                   onChange={(e) =>
                     setFormState({ ...formState, password: e.target.value })
