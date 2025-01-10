@@ -3,9 +3,7 @@ import {
   MailIcon,
   OfficeIcon,
   PhoneIcon,
-  SocialFacebookIcon,
   SocialInstagramIcon,
-  SocialSnapChatIcon,
   SocialTikTokIcon,
   SocialTwitterIcon,
   SocialWhatsAppIcon,
@@ -21,7 +19,6 @@ import TipsCard from '../components/Molecules/TipsCard';
 import AdressDescription from '../components/Molecules/AdressDescription';
 import { fetchBlogs } from '@/baseUrl';
 import { TBlogs } from '@/lib/types';
-import { TikTok, Whatsapp } from '@/components/Molecules/Footer';
 import Link from 'next/link';
 
 export default async function Home() {
