@@ -28,7 +28,7 @@ const TipsCard = (props: {
         </CardTitle>
         <div className='flex flex-col justify-end'>
           <CardDescription className='py-3 max-w-96 text-base text-neutral-700'>
-            {props.description}
+            {props.description + '...'}
           </CardDescription>
         </div>
       </div>

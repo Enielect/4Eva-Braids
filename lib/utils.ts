@@ -6,3 +6,6 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 
+export const SnakeCaseToCamelCase = (str: string) => {
+  return str.replace(/_/g, ' ');
+}

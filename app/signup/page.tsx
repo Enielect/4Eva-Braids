@@ -41,7 +41,7 @@ export default function SignUpPage() {
         state?.errorMessage || 'An error occured when trying to signup'
       );
     if (state?.message) {
-      toast.success(state?.message);
+      toast.success(state?.message || 'SignUp successful');
       //clear input field
       setFormState({
         email: '',
@@ -51,7 +51,7 @@ export default function SignUpPage() {
         confirmPassword: '',
         phoneNumber: '',
       });
-      router.push('/');
+      router.push('/login');
     }
     //eslint-disable-next-line
   }, [state]);

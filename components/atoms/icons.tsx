@@ -278,3 +278,37 @@ export const MissionIcon = (props: { className?: string }) => (
     />
   </svg>
 );
+
+export const DummyProfile = (props: { calssName?: string }) => (
+  <svg
+    width='48'
+    height='48'
+    viewBox='0 0 48 48'
+    className={props.calssName}
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <g clipPath='url(#clip0_4078_10749)'>
+      <rect width='48' height='48' rx='24' fill='#FAFAFA' />
+      <path
+        d='M31.4997 16C31.4997 20.1421 28.1418 23.5 23.9997 23.5C19.8575 23.5 16.4997 20.1421 16.4997 16C16.4997 11.8579 19.8575 8.5 23.9997 8.5C28.1418 8.5 31.4997 11.8579 31.4997 16Z'
+        stroke='#A48526'
+        strokeWidth='3.00071'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <path
+        d='M9.00195 44.2365C9.14256 36.0738 15.8034 29.5 23.9997 29.5C32.1961 29.5 38.8571 36.0741 38.9974 44.2371C34.4318 46.332 29.3525 47.5 24.0003 47.5C18.6477 47.5 13.5679 46.3318 9.00195 44.2365Z'
+        stroke='#A48526'
+        strokeWidth='3.00071'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </g>
+    <defs>
+      <clipPath id='clip0_4078_10749'>
+        <rect width='48' height='48' rx='24' fill='white' />
+      </clipPath>
+    </defs>
+  </svg>
+);
