@@ -71,26 +71,101 @@ const ServiceContent = ({ userData }: { userData: TUserData }) => {
   return (
     <div className='mx-8 my-6'>
       <header className='text-center'>
-        <Heading className='sm:hidden'>what we offer</Heading>
+        <Heading className='sm:hidden'>What we offer</Heading>
         <Design className='mx-auto hidden sm:block' />
         <span className='max-w-[300px] py-3 text-neutral-700 hidden sm:inline-block'>
-          Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis
-          congue quis odio massa ipsum. Amet diam venenatis.
+          These are just a few of the services we offer. Hit the book button and type in a description of the exact style you want!
         </span>
       </header>
 
       <section className='mt-5 gap-y-12 grid max-[480px]:grid-cols-1 grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center'>
-        {/* ServicesCard */}
-        {Array(10)
-          .fill('')
-          .map((ele, i) => (
-            <ServicesCard
-              key={i}
-              title='Service Title'
-              description='Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis. Orci sed pharetra eu mattis congue quis odio massa ipsum. Amet diam venenatis.'
-            />
-          ))}
-      </section>
+        <ServicesCard
+          title="Bohemian Braids"
+          description="A blend of loose, carefree styling and intricate braid patterns, exuding a relaxed, boho vibe. Ideal for festivals, casual outings,
+          or special events, these natural-looking plaits feature soft textures and timeless appeal. Perfect for achieving an effortlessly chic aesthetic."
+        />
+
+        <ServicesCard
+          title="Knotless Braids"
+          description='A revolutionary protective style offering a sleek, natural look without knots. Lightweight and gentle on the scalp, they ensure comfort and durability.
+          Suitable for long-lasting wear, Knotless Braids balance beauty and practicality for various lengths and styles.'
+        />
+
+        <ServicesCard
+          title='French Braids'
+          description='A classic, timeless braid style featuring overlapping strands for a smooth, polished look. Perfect for everyday wear or formal occasions,
+          French Braids are versatile and can serve as the foundation for more intricate styles. Ideal for an elegant and refined appearance.'
+        />
+
+        <ServicesCard
+          title='Cornrow'
+          description='Intricate, close-to-the-scalp braids known for their durability and versatility. Available in straight-back designs, zig-zag patterns, or custom artistry,
+          Cornrows are perfect for protective styling while showcasing creativity and personality. An iconic choice for any occasion.'
+        />
+
+        <ServicesCard
+          title="Box Braids"
+          description="Achieve a timeless and versatile look with Box Braids, a protective style featuring individual plaits neatly parted into box-shaped sections. Perfect for long-term wear, these braids offer flexibility in length, size, and styling options."
+        />
+        
+        <ServicesCard
+          title="Goddess Braids"
+          description="Embody elegance with Goddess Braids, larger cornrow-style braids that are sleek and bold. Often adorned with accessories, this style is perfect for making a statement while protecting your hair."
+        />
+        
+        <ServicesCard
+          title="Fishtail Braids"
+          description="Elevate your style with Fishtail Braids, a unique braid technique that intertwines small sections of hair for a detailed, woven effect. Ideal for formal events or casual wear, this braid adds a touch of sophistication."
+        />
+        
+        <ServicesCard
+          title="Halo Braids"
+          description="Channel ethereal beauty with Halo Braids, a circular braid that crowns the head. This style is perfect for weddings, special occasions, or everyday wear, offering a regal and polished look."
+        />
+        
+        <ServicesCard
+          title="Lemonade Braids"
+          description="Inspired by iconic styles, Lemonade Braids are side-swept cornrows known for their chic and edgy appearance. Perfect for making a bold statement, this style combines fashion and functionality effortlessly."
+        />
+        
+        <ServicesCard
+          title="Micro Braids"
+          description="Experience the intricacy of Micro Braids, a detailed style featuring tiny, individual braids. Lightweight and versatile, they allow for various styling options while maintaining a sleek appearance."
+        />
+        
+        <ServicesCard
+          title="Fulani Braids"
+          description="Celebrate tradition with Fulani Braids, a style characterized by intricate patterns, cornrows, and bead embellishments. This cultural braid style is both artistic and practical, perfect for any occasion."
+        />
+        
+        <ServicesCard
+          title="Twist Braids"
+          description="Opt for a softer look with Twist Braids, featuring two-strand twists that offer a natural and textured finish. Perfect for protective styling, this versatile option suits casual and formal settings."
+        />
+        
+        <ServicesCard
+          title="Butterfly Braids"
+          description="Add a whimsical touch with Butterfly Braids, a voluminous style combining soft textures and creative patterns. Ideal for achieving a bold yet elegant look suitable for any event."
+        />
+        
+        <ServicesCard
+          title="Jumbo Braids"
+          description="Make a bold statement with Jumbo Braids, a style featuring thick, oversized plaits. Perfect for quick styling, these braids are both trendy and protective, offering a striking and low-maintenance option."
+        />
+        
+        <ServicesCard
+          title="Crochet Braids"
+          description="Discover convenience with Crochet Braids, a method of attaching pre-braided or twisted hair to your natural hair. This quick and versatile style is ideal for achieving a variety of looks effortlessly."
+        />
+        
+        <ServicesCard
+          title="Waterfall Braids"
+          description="Achieve a romantic and flowing look with Waterfall Braids, a style where sections of hair cascade like a waterfall. Perfect for weddings or casual outings, this braid offers an enchanting and elegant finish."
+        />
+
+        </section>
+
+
       <section className=' my-[60px]'>
         <div className='h-full grid md:grid-cols-[1fr_2fr] gap-[3rem]'>
           <ImageCard image={BookAppointment} className='lg:max-h-[40rem]' />
@@ -100,20 +175,20 @@ const ServiceContent = ({ userData }: { userData: TUserData }) => {
             </h3>
             <div className='grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
               <DescriptionCard
-                description='lorem4serserwr skla jdsklfj akldjsfkaj sdfkjasdfjdjfad fd'
-                title='I am the title'
+                description='Put in your details and we will get back to you immediately via call or chat'
+                title='Fill the Form Below'
               />
               <DescriptionCard
-                description='lorem4serserwr skla jdsklfj akldjsfkaj sdfkjasdfjdjfad fd'
-                title='I am the title'
+                description='We are actively online and ready to receive your request on WhatsApp. click the "Book Via" button below the right side of this screen'
+                title='Or send a Direct Message on WhatsApp'
               />
               <DescriptionCard
-                description='lorem4serserwr skla jdsklfj akldjsfkaj sdfkjasdfjdjfad fd'
-                title='I am the title'
+                description='Instagram is also a good way to reach us. We are always online. click the "Book Via" button below the right side of this screen'
+                title='Or Instagram if you prefer'
               />
               <DescriptionCard
-                description='lorem4serserwr skla jdsklfj akldjsfkaj sdfkjasdfjdjfad fd'
-                title='I am the title'
+                description='A direct call to our line (check the bottom of the page) is also a possible way to place an appointment'
+                title='You can also call our active line'
               />
             </div>
             <div className='max-w-[150px] my-8'>
@@ -127,8 +202,7 @@ const ServiceContent = ({ userData }: { userData: TUserData }) => {
           <Heading className=''>book a service</Heading>
           <Design className='mx-auto hidden sm:block' />
           <span className='max-w-[300px] py-3 text-neutral-700 hidden sm:inline-block'>
-            Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis
-            congue quis odio massa ipsum. Amet diam venenatis.
+            Hello, you are just about to get the best service of your life. Fill in the form below and we will get back to you shortly
           </span>
         </div>
         <form action={action} className='space-y-4'>
@@ -250,8 +324,7 @@ const ServiceContent = ({ userData }: { userData: TUserData }) => {
           <Heading>frequently asked questions</Heading>
           <Design className='mx-auto hidden sm:block' />
           <span className='max-w-[300px] py-3 text-neutral-700 hidden sm:inline-block'>
-            Lorem ipsum dolor sit amet consectetur. Orci sed pharetra eu mattis
-            congue quis odio massa ipsum. Amet diam venenatis.
+            Your question not here? feel free to reach out on our social media handles
           </span>
         </div>
         <div className=''>

@@ -17,49 +17,45 @@ const AccordionWrapper = () => {
         value='item-1 '
         className='bg-primary/500 rounded-md px-4 sm:text-lg text-white'
       >
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionTrigger>How long before I get a response after booking?</AccordionTrigger>
         <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
+          Typically in minutes if booked via Whatsapp or IG, and within 2 hours if booked via the form above.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem
         value='item-2'
         className='bg-primary/500 rounded-md px-4 sm:text-lg text-white'
       >
-        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionTrigger>How do I know the prices of each style?</AccordionTrigger>
         <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
+          A price list of all our services will be sent to you when you book an appointment.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem
         value='item-3'
         className='bg-primary/500 rounded-md px-4 sm:text-lg text-white'
       >
-        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionTrigger>What if I want to braid my hair at night?</AccordionTrigger>
         <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you
-          prefer.
+          Our service is 24/7. You can book an appointment for anytime of the day
         </AccordionContent>
       </AccordionItem>
       <AccordionItem
         value='item-4'
         className='bg-primary/500 rounded-md px-4 sm:text-lg text-white'
       >
-        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionTrigger>How many people will braid my hair at a time?</AccordionTrigger>
         <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
+          Typically 3. it can be less and you can request more if you want.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem
         value='item-5'
         className='bg-primary/500 rounded-md px-4 sm:text-lg text-white'
       >
-        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionTrigger>Do you make other styles that are not listed on this website?</AccordionTrigger>
         <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you
-          prefer.
+          Yes we do
         </AccordionContent>
       </AccordionItem>
     </Accordion>
