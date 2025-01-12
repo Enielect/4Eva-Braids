@@ -10,8 +10,13 @@ import {
 } from '../components/atoms/icons';
 import HeroImage from '@/public/hero-image.svg';
 import { CustomLink } from '../components/atoms/Button';
-import Model1 from '@/public/Model-1.svg';
-import ForeGround from '@/public/Foreground.png';
+import BraidsOne from '@/public/braids-one.jpg';
+import BraidsTwo from '@/public/braids-two.jpg';
+import BraidsThree from '@/public/braids-three.jpg';
+import BraidsFive from '@/public/braids-five.jpg';
+import BraidsSix from '@/public/braids-six.jpg';
+import BraidsSeven from '@/public/braids-seven.jpg';
+import ForeGround from '@/public/Foreground.jpg';
 import ImageCard from '../components/Molecules/ImageCard';
 import DescriptionCard from '../components/Molecules/DescriptionCard';
 import OfferCard from '../components/Molecules/OfferCard';
@@ -42,7 +47,7 @@ export default async function Home() {
               hair braiding & dreadlocks
             </span>
             <span className='uppercase block text-neutral-700 text-2xl sm:text-3xl py-2 max-md:mx-auto md:text-left sm:max-w-[37rem] text-center'>
-              transform your hair into a work of art
+              Transform your hair into a work of art
             </span>
           </div>
           <div className='px-3 py-4 sm:flex md:flex-col lg:flex-row md:items-start lg:items-center gap-12 max-md:mx-auto items-center'>
@@ -63,7 +68,7 @@ export default async function Home() {
           <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-7'>
             <ImageCard
               className='first-grid-item  sm:max-h-[550px]'
-              image={Model1}
+              image={BraidsThree}
             />
             <DescriptionCard
               title='EXPERIENCED STYLISTS'
@@ -77,7 +82,7 @@ export default async function Home() {
           <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-7 max-sm:mt-7'>
             <ImageCard
               className='first-grid-item order-4 sm:max-h-[550px]'
-              image={Model1}
+              image={BraidsTwo}
             />
             <div className='order-2'>
               <DescriptionCard
@@ -102,7 +107,7 @@ export default async function Home() {
         {/* <div className='mt-5 gap-y-12 grid sm:grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center'> */}
         <div className='mt-5 flex gap-4 max-sm:flex-col flex-wrap justify-center items-center'>
           <OfferCard
-            image={Model1}
+            image={BraidsOne}
             title='Boho Braids'
             description='Transform your look with our signature Boho Braids, a perfect blend of loose, carefree styling and intricate braid patterns.
             These braids exude a relaxed, bohemian vibe, ideal for festivals, casual outings, or special events. Designed with natural-looking plaits and soft textures,
@@ -110,17 +115,17 @@ export default async function Home() {
             Whether adorned with accessories or left to flow freely, this braid style promises versatility and timeless appeal.'
           />
           <OfferCard
-            image={Model1}
+            image={BraidsSeven}
             title='Knotless Braids'
             description='Discover the ultimate in protective styling with our Knotless Braids, a revolutionary braid technique known for its sleek, natural appearance. These braids start seamlessly without knots, reducing tension on the scalp while providing a lightweight and comfortable fit. Perfect for long-lasting wear, Knotless Braids are ideal for achieving a flawless look that’s gentle on your hair. Whether you choose long, flowing lengths or a shorter, chic finish, this braid style ensures beauty and practicality go hand in hand.'
           />
           <OfferCard
-            image={Model1}
+            image={BraidsFive}
             title='French Braids'
             description='Embrace the elegance of classic French Braids, a timeless braid style that’s both functional and fashionable. Perfect for all hair types, French Braids feature overlapping strands that create a smooth, polished look. This versatile braid is ideal for everyday wear, formal occasions, or as a foundation for other braided hairstyles. Whether styled in a single braid or multiple intricate patterns, French Braids are a must-have for achieving a sophisticated and refined appearance.'
           />
           <OfferCard
-            image={Model1}
+            image={BraidsSix}
             title='Cornrow'
             description='Step into the world of intricate braiding with our expertly crafted Cornrows, a braid style that combines traditional techniques with modern artistry. Cornrows are tight, close-to-the-scalp braids known for their durability and versatility. Whether you prefer straight-back braids, zig-zag patterns, or custom designs, this style lets you showcase your creativity and personality. Perfect for protective styling, Cornrows keep your hair secure and stunning, making them an iconic choice for any occasion.'
           />
@@ -129,6 +134,13 @@ export default async function Home() {
           <CustomLink href='/services'>View all services</CustomLink>
         </div>
       </div>
+      <section className='py-8 px-8'>
+        <div className='uppercase py-6 text-3xl text-center'>Our Works</div>
+        <div className=''></div>
+        <div className='sm:max-w-[60rem] mx-auto my-9'>
+          <CustomLink href='/gallery'>View Complete gallery</CustomLink>
+        </div>
+      </section>
       <section className='pb-8 bg-[#D58A2D1A] px-8'>
         {/* <div className='uppercase py-6 text-3xl text-center sm:text-5xl sm:text-left sm:py-8'> */}
         <div className='uppercase py-6 text-3xl text-center sm:text-5xl  sm:py-8'>
@@ -148,13 +160,6 @@ export default async function Home() {
         </div>
         <div className='sm:max-w-[60rem] mx-auto my-9'>
           <CustomLink href='/blog'>View all</CustomLink>
-        </div>
-      </section>
-      <section className='py-8 px-8'>
-        <div className='uppercase py-6 text-3xl text-center'>Our Works</div>
-        <div className=''></div>
-        <div className='sm:max-w-[60rem] mx-auto my-9'>
-          <CustomLink href='/gallery'>View Complete gallery</CustomLink>
         </div>
       </section>
       <section className=' relative max-md:flex-col gap-4 justify-between sm:max-w-[80vw] sm:mx-auto flex md:my-[130px]'>

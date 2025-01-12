@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import HeroImage from '@/public/hero-image.svg';
+import Ceo from '@/public/ceo.jpg';
+import CeoAgain from '@/public/ceo-again.jpg';
 import Image from 'next/image';
 import { EyeIcon, MissionIcon } from '../../components/atoms/icons';
 import Heading from '@/components/Molecules/Heading';
@@ -10,7 +11,7 @@ const AboutPage = () => {
       <section className='px-7 md:grid grid-cols-2 place-items-center gap-4 md:px-14 my-5'>
         <div className='rounded-tl-[100px] border overflow-hidden w-full h-[80%]'>
           <Image
-            src={HeroImage}
+            src={CeoAgain}
             width={400}
             height={400}
             className='w-full h-full'
@@ -77,7 +78,7 @@ const AboutPage = () => {
       <section className='px-7 py-4 lg:py-14 sm:py-4 md:py-5 md:grid gap-7 grid-cols-2 place-items-center mt-5 bg-[#F3ECD5]'>
         <div className='border-r-[100%] h-full'>
           <Image
-            src={HeroImage}
+            src={Ceo}
             width={400}
             height={400}
             className='w-full h-full'
