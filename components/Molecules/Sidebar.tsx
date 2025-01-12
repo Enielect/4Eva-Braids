@@ -9,7 +9,7 @@ type SidebarProp = {
 const Sidebar: FC<SidebarProp> = ({ isOpen, setNavOpen }) => {
   return (
     <div
-      className={`fixed top-[75px] left-0 w-full flex flex-col gap-4 bg-white px-6 py-4 z-50 transform overflow-hidden transition-transform duration-300 ${
+      className={`fixed top-[77px] left-0 w-full flex flex-col gap-4 bg-white px-6 py-4 z-50 transform overflow-hidden transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >

@@ -85,4 +85,5 @@ export const navItems: TNavItem[] = [
   { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
   { name: 'Gallery', href: '/gallery' },
+  { name: 'Login / Register', href: '/login' },
 ];
