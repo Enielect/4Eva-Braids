@@ -95,7 +95,7 @@ const AboutPage = () => {
           
           A graduate of English from Nnamdi Azikiwe University (UNIZIK), 
           Evaresta’s journey into braiding began long before her professional career. From her primary school days,
-          she displayed remarkable skill and creativity, braiding her classmates' hair with precision and flair.
+          she displayed remarkable skill and creativity, braiding her classmates`&apos;` hair with precision and flair.
           After graduating, she turned her lifelong talent into a career, building a reputation as a diligent, innovative, and highly skilled braider.
           Today, Evaresta doesn’t just braid hair—she creates styles for greatness. Her work graces the heads of 
           influential individuals, reflecting her commitment to delivering beauty, confidence, and unmatched quality.
