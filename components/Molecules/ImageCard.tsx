@@ -13,8 +13,8 @@ const ImageCard = (props: {
         src={props.image}
         className='object-center h-full w-full object-cover'
         alt='logo'
-        width={300}
-        height={300}
+        width={800}
+        height={800}
       />
     </div>
   );

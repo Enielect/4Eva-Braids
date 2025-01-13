@@ -18,8 +18,8 @@ const TipsCard = (props: {
             loading='lazy'
             src={props.image}
             className='w-full h-full object-cover object-top'
-            width={200}
-            height={200}
+            width={500}
+            height={500}
             alt='tips'
           />
         </div>
