@@ -13,7 +13,7 @@ const ServicesCard = (props: {
       <div className='max-sm:max-w-[200px] rounded-xl max-h-[150px] sm:max-w-[230px] border  overflow-hidden mx-auto'>
         <Image
           className='w-full object-cover'
-          src={props.image}
+          src={Model1}
           width={400}
           height={400}
           alt='services'
