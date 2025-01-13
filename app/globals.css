@@ -79,6 +79,16 @@ html {
   }
 }
 
+input[type="date"]:not(.has-value):before{
+  color: lightgray;
+  content: attr(placeholder);
+}
+
+input[type="time"]:not(.has-value):before{
+  color: lightgray;
+  content: attr(placeholder);
+}
+
 @layer base {
   .card-shadow {
     box-shadow: 4 4 0 0 #000000;
