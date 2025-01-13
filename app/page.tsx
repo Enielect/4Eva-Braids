@@ -147,7 +147,7 @@ export default async function Home() {
           Hair and Braid tips for you
         </div>
         {/* <div className='mt-5 gap-y-12 grid sm:grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center'> */}
-        <div className='mt-5 flex max-sm:flex-col flex-wrap gap-4 md:mx-10 justify-center items-center'>
+        <div className='gap-y-8 grid sm:grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center mb-6'>
           {blogs.map((blog) => (
             <TipsCard
               slug={blog._id}
