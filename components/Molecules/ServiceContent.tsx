@@ -1,4 +1,25 @@
 'use client';
+import BraidsEight from '@/public/braids-eight.jpg';
+import BraidsNine from '@/public/braids-nine.jpg';
+import BraidsTen from '@/public/braids-ten.jpg';
+import BraidsEleven from '@/public/braids-eleven.jpg';
+import BraidsTwelve from '@/public/braids-twelve.jpg';
+import BraidsThirteen from '@/public/braids-thirteen.jpg';
+import BraidsFourteen from '@/public/braids-fourteen.jpg';
+import BraidsFifteen from '@/public/braids-fifteen.jpg';
+import BraidsSixteen from '@/public/braids-sixteen.jpg';
+import BraidsSeventeen from '@/public/braids-seventeen.jpg';
+import BraidsEighteen from '@/public/braids-eighteen.jpg';
+import BraidsNinteen from '@/public/braids-ninteen.jpg';
+import BraidsTwenty from '@/public/braids-twenty.jpg';
+import BraidsTwentyOne from '@/public/braids-twentyone.jpg';
+import BraidsTwentyTwo from '@/public/braids-twentytwo.jpg';
+import BraidsTwentyThree from '@/public/braids-twentythree.jpg';
+import BraidsTwentyFour from '@/public/braids-twentyfour.jpg';
+import BraidsTwentyFive from '@/public/braids-twentyfive.jpg';
+import BraidsTwentySix from '@/public/braids-twentysix.jpg';
+import BraidsTwentySeven from '@/public/braids-twentyseven.jpg';
+import BraidsTwentyEight from '@/public/braids-twentyeight.jpg';
 
 import React, { useActionState, useEffect } from 'react';
 import ServicesCard from '@/components/Molecules/ServicesCard';
@@ -81,6 +102,7 @@ const ServiceContent = ({ userData }: { userData: TUserData }) => {
 
       <section className='mt-5 gap-y-12 grid max-[480px]:grid-cols-1 grid-cols-2 md:grid-cols-3 gap-x-14 lg:grid-cols-4 xl:grid-cols-5 place-items-center'>
         <ServicesCard
+          image={BraidsEight}
           title='Bohemian Braids'
           description='A blend of loose, carefree styling and intricate braid patterns, exuding a relaxed, boho vibe. Ideal for festivals, casual outings,
           or special events, these natural-looking plaits feature soft textures and timeless appeal. Perfect for achieving an effortlessly chic aesthetic.'
