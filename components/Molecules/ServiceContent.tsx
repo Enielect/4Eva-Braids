@@ -209,6 +209,8 @@ const ServiceContent = ({ userData }: { userData: TUserData }) => {
           <Input
             type='text'
             required
+            pattern='^[A-Za-z]+ [A-Za-z]+$'
+            title='Fullname must contain exactly two words separated by a space.' 
             value={formState.fullname}
             onChange={(e) =>
               setFormState({ ...formState, fullname: e.target.value })

@@ -24,6 +24,7 @@ export async function ClickStatMarker(platform: 'W' | 'G') {
 
 export async function RegisterBooking(prev: unknown, formData: FormData) {
   const body = Object.fromEntries(formData.entries());
+
   const formatted = {
     fullname: body.fullname,
     email: body.email,
@@ -39,12 +40,15 @@ export async function RegisterBooking(prev: unknown, formData: FormData) {
     const queryParams = new URLSearchParams(
       formatted as Record<string, string>
     );
-    const response = await fetch(`${baseUrl}/bookings?${queryParams.toString()}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const response = await fetch(
+      `${baseUrl}/bookings?${queryParams.toString()}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
 
     // console.log(response, 'this is the response object');
     if (response.ok) {
