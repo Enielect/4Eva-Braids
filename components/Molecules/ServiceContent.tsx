@@ -20,7 +20,6 @@ import BraidsTwentyFive from '@/public/braids-twentyfive.jpg';
 import BraidsTwentySix from '@/public/braids-twentysix.jpg';
 import BraidsTwentySeven from '@/public/braids-twentyseven.jpg';
 import BraidsTwentyEight from '@/public/braids-twentyeight.jpg';
-
 import React, { useActionState, useEffect } from 'react';
 import ServicesCard from '@/components/Molecules/ServicesCard';
 import ImageCard from '@/components/Molecules/ImageCard';
