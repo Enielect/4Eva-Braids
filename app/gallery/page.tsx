@@ -17,8 +17,8 @@ const TikTokLinks = [
   'https://www.tiktok.com/@4evabraids/video/7454109868232838406',
   'https://www.tiktok.com/@4evabraids/video/7453795544880712965',
   'https://www.tiktok.com/@4evabraids/video/7451494793391164678',
-  'https://www.tiktok.com/@4evabraids/video/7448912359688637701',
-  'https://www.tiktok.com/@4evabraids/video/7443714961756540216',
+  // 'https://www.tiktok.com/@4evabraids/video/7448912359688637701',
+  // 'https://www.tiktok.com/@4evabraids/video/7443714961756540216',
 ];
 
 const GalleryPage = () => {

@@ -31,9 +31,9 @@ const InputFIeld: FC<
             className='mt-2 text-sm text-primary-600 absolute right-2 bottom-2 hover:text-primary-500'
           >
             {displayPassword ? (
-              <EyeOff className='h-6 w-6' />
+              <EyeOff className='h-6 w-6 text-gray-500' />
             ) : (
-              <Eye className='h-6 w-6' />
+              <Eye className='h-6 w-6 text-gray-500' />
             )}
           </button>
         ) : null}

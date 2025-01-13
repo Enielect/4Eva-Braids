@@ -6,13 +6,13 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import Link from 'next/link';
-import HeroImage from '@/public/hero2.svg';
-import Logo from '@/public/logo2.svg';
+import Logo from '@/public/logo.svg';
 import { useActionState, useEffect, useState } from 'react';
 import { loginAction } from './actions/auth';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
+import InputFIeld from '@/components/Molecules/InputFIeld';
 
 interface FormState {
   email: string;
@@ -44,32 +44,23 @@ export default function LoginPage() {
   }, [state]);
   return (
     <div className='flex min-h-screen lg:grid grid-cols-[6fr_4fr] bg-gray-100'>
-      <div className=' h-screen hidden lg:block'>
-        <Image
-          src={HeroImage}
-          alt='Login Background'
-          width={840}
-          height={1024}
-          className='w-full h-full object-cover object-top'
-        />
-      </div>
-
       {/* Right Side - Login Form */}
       <div className='w-full  mx-auto flex flex-col justify-center p-8 bg-white relative'>
-        <div className='absolute top-0 left-0 p-4 lg:hidden'>
-          <Image src={Logo} alt='4EVA BRAIDS Logo' width={123} height={24} />
-        </div>
-
         <Card className='shadow-none border-0'>
           <CardContent className='md:mt-16 space-y-6'>
-            <div className='mb-8 text-center'>
-              <Image
-                src={Logo}
-                alt='4EVA BRAIDS Logo'
-                width={326}
-                height={64}
-                className='mx-auto'
-              />
+            <div className='flex items-center gap-3 justify-center'>
+              <div className='h-12 w-12 text-center'>
+                <Image
+                  src={Logo}
+                  alt='4EVA BRAIDS Logo'
+                  width={326}
+                  height={64}
+                  className='mx-auto'
+                />
+              </div>
+              <span className='text-primary/500 pt-2 font-[900] text-4xl'>
+                4Eva Braids
+              </span>
             </div>
             <p className='text-center text-gray-500'>
               Enter your details to login
@@ -96,7 +87,20 @@ export default function LoginPage() {
                 )}
               </div>
               <div>
-                <Input
+                <InputFIeld
+                  showPassword={true} //wrong type!!!!
+                  // setShowPassword={setShowPassword}
+                  value={formState.password}
+                  onChange={(e) =>
+                    setFormState({ ...formState, password: e.target.value })
+                  }
+                  id='password'
+                  className='mt-1'
+                  required
+                  name='password'
+                  placeholder='Enter Password'
+                />
+                {/* <Input
                   required
                   id='password'
                   type='password'
@@ -107,7 +111,7 @@ export default function LoginPage() {
                   }
                   placeholder='Password'
                   className='mt-1'
-                />
+                /> */}
                 {state?.errors?.password && (
                   <div className='text-red-500 text-sm pt-1'>
                     <p>Password must:</p>

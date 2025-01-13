@@ -70,7 +70,7 @@ function Book(props: ButtonProp) {
       onClick={props.onClick}
       className={`transition-all duration-300 min-w-[145px] ${
         props.show ? 'bg-white' : 'bg-[#EF4444]'
-      } flex items-center text-lg px-5 py-3 font-bold rounded-full fixed bottom-5 right-5 sm:right-10  md:right-12 text-white`}
+      } flex items-center text-lg px-5 py-3 font-bold rounded-full z-50 fixed bottom-5 right-5 sm:right-10  md:right-12 text-white`}
     >
       {!props.show ? (
         <span className='flex w-full'>

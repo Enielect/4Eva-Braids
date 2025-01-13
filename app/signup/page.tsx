@@ -7,7 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import Link from 'next/link';
 import HeroImage from '@/public/hero3.svg';
-import Logo from '@/public/logo2.svg';
+import Logo from '@/public/logo.svg';
 import { signUpAction } from '../login/actions/auth';
 import { useActionState, useEffect, useState } from 'react';
 import { Loader2 } from 'lucide-react';
@@ -69,20 +69,21 @@ export default function SignUpPage() {
 
       {/* Right Side - Login Form */}
       <div className='w-full mx-auto flex flex-col justify-center p-8 bg-white relative'>
-        <div className='absolute top-0 left-0 p-4 lg:hidden'>
-          <Image src={Logo} alt='4EVA BRAIDS Logo' width={123} height={24} />
-        </div>
-
         <Card className='shadow-none border-0'>
           <CardContent className='md:mt-16 space-y-6'>
-            <div className='mb-8 text-center'>
-              <Image
-                src={Logo}
-                alt='4EVA BRAIDS Logo'
-                width={326}
-                height={64}
-                className='mx-auto'
-              />
+            <div className='flex items-center gap-3 justify-center'>
+              <div className='h-12 w-12 text-center'>
+                <Image
+                  src={Logo}
+                  alt='4EVA BRAIDS Logo'
+                  width={326}
+                  height={64}
+                  className='mx-auto'
+                />
+              </div>
+              <span className='text-primary/500 pt-2 font-[900] text-4xl'>
+                4Eva Braids
+              </span>
             </div>
             <p className='text-center text-gray-500'>Create an account</p>
 
@@ -156,6 +157,7 @@ export default function SignUpPage() {
                 <InputFIeld
                   showPassword={true} //wrong type!!!!
                   // setShowPassword={setShowPassword}
+                  value={formState.password}
                   id='password'
                   name='password'
                   placeholder='Enter Password'

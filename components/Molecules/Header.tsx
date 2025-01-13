@@ -30,7 +30,7 @@ const Header = ({ firstName }: { firstName: string }) => {
       <div className='hidden md:flex gap-6 md:gap-8 items-center'>
         <nav>
           <ul className='flex items-center gap-3 md:gap-6'>
-            {navItems.map((item) => (
+            {navItems.slice(0,-1).map((item) => (
               <li key={item.name} className='relative'>
                 <Link
                   href={item.href}
