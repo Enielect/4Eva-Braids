@@ -15,11 +15,11 @@ import BraidsTwenty from '@/public/braids-twenty.jpg';
 import BraidsTwentyOne from '@/public/braids-twentyone.jpg';
 import BraidsTwentyTwo from '@/public/braids-twentytwo.jpg';
 import BraidsTwentyThree from '@/public/braids-twentythree.jpg';
-import BraidsTwentyFour from '@/public/braids-twentyfour.jpg';
-import BraidsTwentyFive from '@/public/braids-twentyfive.jpg';
-import BraidsTwentySix from '@/public/braids-twentysix.jpg';
-import BraidsTwentySeven from '@/public/braids-twentyseven.jpg';
-import BraidsTwentyEight from '@/public/braids-twentyeight.jpg';
+// import BraidsTwentyFour from '@/public/braids-twentyfour.jpg';
+// import BraidsTwentyFive from '@/public/braids-twentyfive.jpg';
+// import BraidsTwentySix from '@/public/braids-twentysix.jpg';
+// import BraidsTwentySeven from '@/public/braids-twentyseven.jpg';
+// import BraidsTwentyEight from '@/public/braids-twentyeight.jpg';
 import React, { useActionState, useEffect } from 'react';
 import ServicesCard from '@/components/Molecules/ServicesCard';
 import ImageCard from '@/components/Molecules/ImageCard';
@@ -108,79 +108,94 @@ const ServiceContent = ({ userData }: { userData: TUserData }) => {
         />
 
         <ServicesCard
+         image={BraidsNine}
           title='Knotless Braids'
           description='A revolutionary protective style offering a sleek, natural look without knots. Lightweight and gentle on the scalp, they ensure comfort and durability.
           Suitable for long-lasting wear, Knotless Braids balance beauty and practicality for various lengths and styles.'
         />
 
         <ServicesCard
+          image={BraidsTen}
           title='French Braids'
           description='A classic, timeless braid style featuring overlapping strands for a smooth, polished look. Perfect for everyday wear or formal occasions,
           French Braids are versatile and can serve as the foundation for more intricate styles. Ideal for an elegant and refined appearance.'
         />
 
         <ServicesCard
+          image={BraidsEleven}
           title='Cornrow'
           description='Intricate, close-to-the-scalp braids known for their durability and versatility. Available in straight-back designs, zig-zag patterns, or custom artistry,
           Cornrows are perfect for protective styling while showcasing creativity and personality. An iconic choice for any occasion.'
         />
 
         <ServicesCard
+          image={BraidsTwelve}
           title='Box Braids'
           description='Achieve a timeless and versatile look with Box Braids, a protective style featuring individual plaits neatly parted into box-shaped sections. Perfect for long-term wear, these braids offer flexibility in length, size, and styling options.'
         />
 
         <ServicesCard
+          image={BraidsThirteen}
           title='Goddess Braids'
           description='Embody elegance with Goddess Braids, larger cornrow-style braids that are sleek and bold. Often adorned with accessories, this style is perfect for making a statement while protecting your hair.'
         />
 
         <ServicesCard
+          image={BraidsFourteen}
           title='Fishtail Braids'
           description='Elevate your style with Fishtail Braids, a unique braid technique that intertwines small sections of hair for a detailed, woven effect. Ideal for formal events or casual wear, this braid adds a touch of sophistication.'
         />
 
         <ServicesCard
+          image={BraidsFifteen}
           title='Halo Braids'
           description='Channel ethereal beauty with Halo Braids, a circular braid that crowns the head. This style is perfect for weddings, special occasions, or everyday wear, offering a regal and polished look.'
         />
 
         <ServicesCard
+          image={BraidsSixteen}
           title='Lemonade Braids'
           description='Inspired by iconic styles, Lemonade Braids are side-swept cornrows known for their chic and edgy appearance. Perfect for making a bold statement, this style combines fashion and functionality effortlessly.'
         />
 
         <ServicesCard
+          image={BraidsSeventeen}
           title='Micro Braids'
           description='Experience the intricacy of Micro Braids, a detailed style featuring tiny, individual braids. Lightweight and versatile, they allow for various styling options while maintaining a sleek appearance.'
         />
 
         <ServicesCard
+          image={BraidsEighteen}
           title='Fulani Braids'
           description='Celebrate tradition with Fulani Braids, a style characterized by intricate patterns, cornrows, and bead embellishments. This cultural braid style is both artistic and practical, perfect for any occasion.'
         />
 
         <ServicesCard
+          image={BraidsNinteen}
           title='Twist Braids'
           description='Opt for a softer look with Twist Braids, featuring two-strand twists that offer a natural and textured finish. Perfect for protective styling, this versatile option suits casual and formal settings.'
         />
 
         <ServicesCard
+          image={BraidsTwenty}
           title='Butterfly Braids'
           description='Add a whimsical touch with Butterfly Braids, a voluminous style combining soft textures and creative patterns. Ideal for achieving a bold yet elegant look suitable for any event.'
         />
 
         <ServicesCard
+          image={BraidsTwentyOne}
           title='Jumbo Braids'
           description='Make a bold statement with Jumbo Braids, a style featuring thick, oversized plaits. Perfect for quick styling, these braids are both trendy and protective, offering a striking and low-maintenance option.'
         />
 
         <ServicesCard
+          image={BraidsTwentyTwo}
           title='Crochet Braids'
           description='Discover convenience with Crochet Braids, a method of attaching pre-braided or twisted hair to your natural hair. This quick and versatile style is ideal for achieving a variety of looks effortlessly.'
         />
 
         <ServicesCard
+          image={BraidsTwentyThree}
           title='Waterfall Braids'
           description='Achieve a romantic and flowing look with Waterfall Braids, a style where sections of hair cascade like a waterfall. Perfect for weddings or casual outings, this braid offers an enchanting and elegant finish.'
         />
