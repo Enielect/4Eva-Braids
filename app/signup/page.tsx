@@ -143,19 +143,33 @@ export default function SignUpPage() {
                 )}
               </div>
               <div>
-                {<Input
-                  id='password'
+                <InputFIeld
+                  showPassword={true} //wrong type!!!!
+                  // setShowPassword={setShowPassword}
                   value={formState.password}
                   onChange={(e) =>
                     setFormState({ ...formState, password: e.target.value })
                   }
-                  type='password'
+                  id='password'
+                  className='mt-1'
+                  required
                   name='password'
                   placeholder='Enter Password'
-                  className='mt-1 '
-                />}
+                />
+                {/* <Input
+                  required
+                  id='password'
+                  type='password'
+                  name='password'
+                  value={formState.password}
+                  onChange={(e) =>
+                    setFormState({ ...formState, password: e.target.value })
+                  }
+                  placeholder='Password'
+                  className='mt-1'
+                /> */}
                 {state?.errors?.password && (
-                  <div className='text-red-500 max-sm:text-sm pt-1'>
+                  <div className='text-red-500 text-sm pt-1'>
                     <p>Password must:</p>
                     <ul>
                       {state?.errors?.password?.map((error) => (
