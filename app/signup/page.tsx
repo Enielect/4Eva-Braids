@@ -143,7 +143,7 @@ export default function SignUpPage() {
                 )}
               </div>
               <div>
-                {/* <Input
+                {<Input
                   id='password'
                   value={formState.password}
                   onChange={(e) =>
@@ -153,15 +153,7 @@ export default function SignUpPage() {
                   name='password'
                   placeholder='Enter Password'
                   className='mt-1 '
-                /> */}
-                <InputFIeld
-                  showPassword={true} //wrong type!!!!
-                  // setShowPassword={setShowPassword}
-                  value={formState.password}
-                  id='password'
-                  name='password'
-                  placeholder='Enter Password'
-                />
+                />}
                 {state?.errors?.password && (
                   <div className='text-red-500 max-sm:text-sm pt-1'>
                     <p>Password must:</p>
