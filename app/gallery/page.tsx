@@ -10,16 +10,16 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import React from 'react';
-import { InstagramEmbed, TikTokEmbed } from 'react-social-media-embed';
+// import { InstagramEmbed, TikTokEmbed } from 'react-social-media-embed';
 
-const TikTokLinks = [
-  'https://www.tiktok.com/@4evabraids/video/7455407154485333253',
-  'https://www.tiktok.com/@4evabraids/video/7454109868232838406',
-  'https://www.tiktok.com/@4evabraids/video/7453795544880712965',
-  'https://www.tiktok.com/@4evabraids/video/7451494793391164678',
-  // 'https://www.tiktok.com/@4evabraids/video/7448912359688637701',
-  // 'https://www.tiktok.com/@4evabraids/video/7443714961756540216',
-];
+// const TikTokLinks = [
+//   'https://www.tiktok.com/@4evabraids/video/7455407154485333253',
+//   'https://www.tiktok.com/@4evabraids/video/7454109868232838406',
+//   'https://www.tiktok.com/@4evabraids/video/7453795544880712965',
+//   'https://www.tiktok.com/@4evabraids/video/7451494793391164678',
+//   // 'https://www.tiktok.com/@4evabraids/video/7448912359688637701',
+//   // 'https://www.tiktok.com/@4evabraids/video/7443714961756540216',
+// ];
 
 const GalleryPage = () => {
   const [isClient, setIsClient] = React.useState(false);
@@ -34,13 +34,8 @@ const GalleryPage = () => {
       <div className='flex py-4 justify-end'>
         <SelectDemo />
       </div>
-      <div className='grid md:grid-cols-2 gap-x-7 gap-y-10 lg:grid-cols-3 xl:grid-cols-4  place-items-center mb-6'>
-        {/* {Array(10)
-          .fill('')
-          .map((ele, i) => (
-            <PlaceholderImage key={i} />
-          ))} */}
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+      {/* <div className='grid md:grid-cols-2 gap-x-7 gap-y-10 lg:grid-cols-3 xl:grid-cols-4  place-items-center mb-6'> */}
+      {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
           <InstagramEmbed
             url='https://www.instagram.com/p/CUbHfhpswxt/'
             width={328}
@@ -52,6 +47,10 @@ const GalleryPage = () => {
             <TikTokEmbed url={link} width={325} height={500} />
           </div>
         ))}
+        */}
+      {/* </div> */}
+      <div className='w-full h-screen flex text-3xl items-center justify-center'>
+        Coming Soon...
       </div>
     </section>
   );
