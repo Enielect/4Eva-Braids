@@ -8,39 +8,50 @@ import Heading from '@/components/Molecules/Heading';
 const AboutPage = () => {
   return (
     <div>
-      <section className='px-7 md:grid grid-cols-2 place-items-center gap-4 md:px-14 my-5'>
+      <section className='px-7 md:grid grid-cols-2 place-items-center gap-4 md:px-14'>
         <div className='rounded-tl-[100px] border overflow-hidden w-full h-[80%]'>
           <Image
             src={CeoAgain}
             width={400}
             height={400}
-            className='w-full h-full'
+            className='w-full h-full object-cover'
             alt='hero image about section'
           />
         </div>
         <div className='-order-2 md:max-w-[40rem] md:flex justify-center flex-col items-center text-center'>
           <Heading className='lg:text-5xl'>About the company</Heading>
           <p className=''>
-          <strong><em>4evabraids</em> is a next generation braiding salon</strong> that offers a wide range of braiding services. The company was founded in 2019
-          and since then we have retained the reputation a excellence in the industry. <br />
-          <br />
-
-          At <em>4evabraids</em> we’re revolutionizing the hair braiding industry with our next-generation salon experience.
-          Whether you prefer the comfort of your home or the vibrant energy of our in-salon service, our team of highly skilled,
-          professional braiders is committed to crafting stunning, long-lasting styles tailored to you.
-          Renowned for our exceptional craftsmanship, <em>4evabraids</em> has become synonymous with premium quality and innovative 
-          techniques that set us apart from the rest. With an expanding presence across Lagos and plans to launch nationwide soon,
-          we’re bringing our artistry and excellence to more clients who demand nothing but the best.
+            <strong>
+              <em>4evabraids</em> is a next generation braiding salon
+            </strong>{' '}
+            that offers a wide range of braiding services. The company was
+            founded in 2019 and since then we have retained the reputation a
+            excellence in the industry. <br />
+            <br />
+            At <em>4evabraids</em> we’re revolutionizing the hair braiding
+            industry with our next-generation salon experience. Whether you
+            prefer the comfort of your home or the vibrant energy of our
+            in-salon service, our team of highly skilled, professional braiders
+            is committed to crafting stunning, long-lasting styles tailored to
+            you. Renowned for our exceptional craftsmanship, <em>4evabraids</em>{' '}
+            has become synonymous with premium quality and innovative techniques
+            that set us apart from the rest. With an expanding presence across
+            Lagos and plans to launch nationwide soon, we’re bringing our
+            artistry and excellence to more clients who demand nothing but the
+            best.
           </p>
         </div>
       </section>
       <section className="bg-[url('/circular-bg.jpeg')] md:py-12 py-5 space-y-6">
         <div className='md:flex md:max-w-[70rem] mx-auto'>
           <IntentCard icon={<EyeIcon />} title='our vision'>
-            To be the leading all-in-one hair braiding salon in the world, bringing beauty, confidence, and innovation to every client.
+            To be the leading all-in-one hair braiding salon in the world,
+            bringing beauty, confidence, and innovation to every client.
           </IntentCard>
           <IntentCard icon={<MissionIcon />} title='our mission'>
-            At <em>4evabraids</em>, we aim to transform the hair braiding experience by combining artistry, innovation, and unmatched professionalism
+            At <em>4evabraids</em>, we aim to transform the hair braiding
+            experience by combining artistry, innovation, and unmatched
+            professionalism
           </IntentCard>
         </div>
       </section>
@@ -88,29 +99,31 @@ const AboutPage = () => {
         <div className=''>
           <Heading className='lg:text-5xl lg:text-left'>meet the ceo</Heading>
           <p>
-            <strong>Nwofia Chidinma Evaresta</strong> is the visionary CEO and Chief Braider of <em>4evabraids</em>, a brand synonymous with
-          innovation and excellence in the hair braiding industry. With a unique ability to craft masterpieces
-          from every client’s hair, Evaresta has transformed her passion for braiding into a thriving business
-          that redefines beauty and artistry. <br />
-          <br />
-          
-          A graduate of English from Nnamdi Azikiwe University (UNIZIK), 
-          Evaresta’s journey into braiding began long before her professional career. From her primary school days,
-          she displayed remarkable skill and creativity, braiding her classmates`&apos;` hair with precision and flair.
-          After graduating, she turned her lifelong talent into a career, building a reputation as a diligent, innovative, and highly skilled braider.
-          Today, Evaresta doesn’t just braid hair—she creates styles for greatness. Her work graces the heads of 
-          influential individuals, reflecting her commitment to delivering beauty, confidence, and unmatched quality.
-
-          Under her leadership, <em>4evabraids</em> continues to grow, expanding its reach and reputation while staying true to the
-          values of excellence, creativity, and passion that define Evaresta herself.
+            <strong>Nwofia Chidinma Evaresta</strong> is the visionary CEO and
+            Chief Braider of <em>4evabraids</em>, a brand synonymous with
+            innovation and excellence in the hair braiding industry. With a
+            unique ability to craft masterpieces from every client’s hair,
+            Evaresta has transformed her passion for braiding into a thriving
+            business that redefines beauty and artistry. <br />
+            <br />A graduate of English from Nnamdi Azikiwe University (UNIZIK),
+            Evaresta’s journey into braiding began long before her professional
+            career. From her primary school days, she displayed remarkable skill
+            and creativity, braiding her classmates`&apos;` hair with precision
+            and flair. After graduating, she turned her lifelong talent into a
+            career, building a reputation as a diligent, innovative, and highly
+            skilled braider. Today, Evaresta doesn’t just braid hair—she creates
+            styles for greatness. Her work graces the heads of influential
+            individuals, reflecting her commitment to delivering beauty,
+            confidence, and unmatched quality. Under her leadership,{' '}
+            <em>4evabraids</em> continues to grow, expanding its reach and
+            reputation while staying true to the values of excellence,
+            creativity, and passion that define Evaresta herself.
           </p>
         </div>
       </section>
     </div>
   );
 };
-
-
 
 type InnerCardProp = {
   icon: ReactNode;

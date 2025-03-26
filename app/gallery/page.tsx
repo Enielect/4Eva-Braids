@@ -31,9 +31,9 @@ const GalleryPage = () => {
   if (!isClient) return null;
   return (
     <section className='px-4 pb-7'>
-      <div className='flex py-4 justify-end'>
+      {/* <div className='flex py-4 justify-end'>
         <SelectDemo />
-      </div>
+      </div> */}
       {/* <div className='grid md:grid-cols-2 gap-x-7 gap-y-10 lg:grid-cols-3 xl:grid-cols-4  place-items-center mb-6'> */}
       {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
           <InstagramEmbed
@@ -56,6 +56,7 @@ const GalleryPage = () => {
   );
 };
 
+//eslint-disable-next-line
 function SelectDemo() {
   return (
     <Select>
